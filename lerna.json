@@ -1,0 +1,21 @@
+{
+    "access": "public",
+    "allowBranch": ["master"],
+    "includeMergedTags": true,
+    "ignoreChanges": ["**/*.md", "**/*.test.*"],
+    "command": {
+        "version": {
+            "exact": true
+        },
+        "publish": {
+            "yes": true,
+            "conventionalCommits": true,
+            "createRelease": "github",
+            "message": "chore: update changelog and publish packages"
+        }
+    },
+    "npmClient": "yarn",
+    "packages": ["packages/*"],
+    "useWorkspaces": true,
+    "version": "independent"
+}

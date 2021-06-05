@@ -1,0 +1,40 @@
+{
+    "name": "template",
+    "version": "0.0.0",
+    "description": "",
+    "keywords": [],
+    "license": "ISC",
+    "scripts": {
+        "lint": "eslint 'src/**/*.ts'",
+        "start": "ts-node ./src/index.ts",
+        "pretest": "yarn typecheck",
+        "test": "jest --passWithNoTests -w=50%",
+        "typecheck": "tsc -p tsconfig.json"
+    },
+    "dependencies": [],
+    "devDependencies": [
+        "@medly/babel-config@next",
+        "@medly/eslint-config@next",
+        "@medly/prettier-config@next",
+        "@medly/rollup-config@next",
+        "@medly/typescript-config@next",
+        "jest@next",
+        "ts-node@next"
+    ],
+    "babel": {
+        "extends": "@medly/babel-config"
+    },
+    "prettier": "@medly/prettier-config",
+    "eslintConfig": {
+        "extends": "@medly"
+    },
+    "jest": {
+        "rootDir": "./",
+        "collectCoverage": true,
+        "collectCoverageFrom": ["<rootDir>/src/**"],
+        "coverageDirectory": "<rootDir>/coverage/",
+        "moduleFileExtensions": ["ts", "js"],
+        "testMatch": ["**/*.(spec|test).ts"],
+        "verbose": true
+    }
+}

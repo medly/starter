@@ -69,8 +69,8 @@ async function init() {
     installDependencies(packageManager);
 
     // Final messages
-    console.log(chalk.green(`\nSuccess! Created ${projectName} at ${projectRoot}\n`));
-    console.log('Move to the project directory via ' + chalk.green(`cd ${projectName}`) + ' and then you can run below commands\n');
+    console.log(chalk.green('\n🚀 Success!') + ' Created ' + chalk.green(projectName) + ' at ' + chalk.green(projectRoot));
+    console.log('\nMove to the project directory via ' + chalk.green(`cd ${projectName}`) + ' and then you can run below commands\n');
 
     console.table([
         { command: `${packageManager} start`, description: 'To start the project' },

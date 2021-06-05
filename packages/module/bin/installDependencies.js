@@ -29,7 +29,7 @@ module.exports = packageManager => {
         }
     }
 
-    const param = packageManager === 'yarn' ? ['add', '--prefer-offline'] : packageManager === 'npm' ? ['install'] : ['add'];
+    const param = packageManager === 'yarn' ? ['add', '--prefer-offline', '--silent'] : packageManager === 'npm' ? ['install'] : ['add'];
     dependencies.length > 0 &&
         spawnSync(packageManager, [...param, ...dependencies], {
             stdio: 'inherit'

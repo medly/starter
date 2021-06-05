@@ -19,7 +19,7 @@ async function init() {
 
     clear();
     console.log(chalk.rgb(46, 217, 195)(figlet.textSync('Medly', { horizontalLayout: 'full' })));
-    console.log(chalk.rgb(46, 217, 195)('------------------------------------'));
+    console.log(chalk.rgb(46, 217, 195)('------------------------------------\n'));
 
     // Command information
     const program = new commander.Command(packageJson.name)
@@ -49,7 +49,7 @@ async function init() {
     // Create project directory
     const projectRoot = path.resolve(projectName);
     fs.ensureDirSync(projectName);
-    console.log(chalk.green('Project created at ->', projectRoot));
+    console.log('Creating the project at ' + chalk.green(projectRoot));
 
     // Copying template files
     fs.copySync(path.join(template, 'common'), projectRoot);
@@ -65,13 +65,18 @@ async function init() {
     execSync('git init');
 
     // Installing dependencies
-    console.log(chalk.green('Installing dependencies'));
+    console.log('\nInstalling dependencies\n');
     installDependencies(packageManager);
 
-    console.log(chalk.green(projectName) + ' created. You can run the following commands: ');
-    console.log(chalk.green(`${packageManager} start`) + chalk.cyan(' To start the project'));
-    console.log(chalk.green(`${packageManager} test`) + chalk.cyan(' To run the jest tests'));
-    console.log(chalk.green(`${packageManager} lint`) + chalk.cyan(' To run eslint'));
+    // Final messages
+    console.log(chalk.green(`\nSuccess! Created ${projectName} at ${projectRoot}\n`));
+    console.log('Move to the project directory via ' + chalk.green(`cd ${projectName}`) + ' and then you can run below commands\n');
+
+    console.table([
+        { command: `${packageManager} start`, description: 'To start the project' },
+        { command: `${packageManager} test`, description: 'To run the jest tests' },
+        { command: `${packageManager} lint`, description: 'To run eslint' }
+    ]);
 }
 
 init();

@@ -1,0 +1,29 @@
+{
+    "name": "@medly/create-module",
+    "version": "0.0.0",
+    "description": "An application for generating either ts module or simple ts app",
+    "bin": "./bin/index.js",
+    "files": [
+        "bin",
+        "template"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/medly"
+    },
+    "keywords": [
+        "Medly",
+        "ts-module",
+        "start-kit"
+    ],
+    "author": "Mukul Bansal",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^4.1.1",
+        "clear": "^0.1.0",
+        "commander": "^7.2.0",
+        "figlet": "^1.5.0",
+        "fs-extra": "^9.1.0",
+        "inquirer": "^8.1.0"
+    }
+}

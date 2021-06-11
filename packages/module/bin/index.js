@@ -26,17 +26,16 @@ async function init() {
         .version(packageJson.version)
         .arguments('<project-name>')
         .option('-o, --owner <owner>', 'owner of the package')
-        .option('-o, --owner <owner>', 'owner of the package')
-        .addOption(new Option('-p, --publish <registry>', 'registry to publish the module').choices(['npm', 'github']))
+        .addOption(new Option('-r, --registry <registry>', 'registry to publish the module').choices(['npm', 'github']))
         .addOption(
-            new Option('-m, --package-manager  <package-manager>', 'package manager').choices(['npm', 'yarn', 'pnpm']).default('yarn')
+            new Option('-p, --package-manager  <package-manager>', 'package manager').choices(['npm', 'yarn', 'pnpm']).default('yarn')
         )
         .option('-i, --interactive', 'show interactive questionnaire')
         .description('An application for generating either ts module or simple ts app')
         .usage(`${chalk.green('<project-name>')} [options]`)
         .action((name, options) => {
-            if (options.publish && !options.owner) {
-                console.error('Error: Owner of the repo required when you add publish option');
+            if (options.registry && !options.owner) {
+                console.error('Error: Owner of the repo required when you add registry option');
                 process.exit(1);
             }
             projectName = name;
@@ -44,7 +43,7 @@ async function init() {
         .parse(process.argv);
 
     const options = program.opts(),
-        { publish, packageManager } = options.interactive ? await questions() : options;
+        { registry, packageManager } = options.interactive ? await questions() : options;
 
     // Create project directory
     const projectRoot = path.resolve(projectName);
@@ -53,7 +52,7 @@ async function init() {
 
     // Copying template files
     fs.copySync(path.join(template, 'common'), projectRoot);
-    publish ? fs.copySync(path.join(template, 'publishable'), projectRoot) : fs.copySync(path.join(template, 'simple'), projectRoot);
+    registry ? fs.copySync(path.join(template, 'publishable'), projectRoot) : fs.copySync(path.join(template, 'simple'), projectRoot);
 
     // Add project details
     addProjectDetails(projectName, options);
@@ -79,4 +78,6 @@ async function init() {
     ]);
 }
 
+console.time(chalk.green('\n🌟 Done'));
 init();
+console.timeEnd(chalk.green('\n🌟 Done'));

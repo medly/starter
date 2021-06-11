@@ -12,7 +12,7 @@ An application for generating either ts module or simple ts app
 | --------------------------------------- | ------------------------------ | --------------------- | ------- |
 | -V, --version                           | output the version number      |                       |         |
 | -o, --owner <owner>                     | owner of the package           |                       |         |
-| -p, --publish <registry>                | registry to publish the module | `npm`, `github`       |         |
-| -m, --package-manager <package-manager> | package manager                | `npm`, `yarn`, `pnpm` | `yarn`  |
+| -r, --registry <registry>               | registry to publish the module | `npm`, `github`       |         |
+| -p, --package-manager <package-manager> | package manager                | `npm`, `yarn`, `pnpm` | `yarn`  |
 | -i, --interactive                       | show interactive questionnaire |                       |         |
 | -h, --help                              | display help for command       |                       |         |

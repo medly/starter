@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/medly/starter/compare/@medly/starter-shared@0.2.1...@medly/starter-shared@0.2.2) (2021-06-14)
+
+
+### Bug Fixes
+
+* print module export issue ([c77c727](https://github.com/medly/starter/commit/c77c727878a810e7045803662d220ff666ca0dfb))
+
+
+
+
+
 ## [0.2.1](https://github.com/medly/starter/compare/@medly/starter-shared@0.2.0...@medly/starter-shared@0.2.1) (2021-06-14)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/medly/starter/compare/@medly/create-module@0.3.0...@medly/create-module@0.4.0) (2021-06-14)
+
+
+### Features
+
+* add shared package to serve all the common code ([2c410b9](https://github.com/medly/starter/commit/2c410b9cb07e4c51b16d26fbf407fac662651f2c))
+
+
+
+
+
 # [0.3.0](https://github.com/medly/starter/compare/@medly/create-module@0.2.0...@medly/create-module@0.3.0) (2021-06-14)
 
 

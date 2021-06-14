@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 
-module.exports = (projectName, { publish, owner }) => {
+module.exports = (projectName, { registry, owner }) => {
     const projectRoot = path.resolve(projectName),
         package = fs.readJSONSync(path.join(projectRoot, 'template.json'));
 
@@ -9,7 +9,7 @@ module.exports = (projectName, { publish, owner }) => {
     fs.removeSync(path.join(projectRoot, 'template.json'));
 
     // Update basic details based on the options chosen
-    if (publish) {
+    if (registry) {
         package.name = `@${owner}/${projectName}`;
         package.repository = {
             type: 'git',
@@ -17,7 +17,7 @@ module.exports = (projectName, { publish, owner }) => {
         };
         package.homepage = `https://github.com/${owner}/${projectName}#readme`;
         package.bugs = `https://github.com/${owner}/${projectName}/issues`;
-        package.publishConfig.registry = `${publish === 'github' ? 'https://npm.pkg.github.com' : 'https://registry.npmjs.org'}/${owner}`;
+        package.publishConfig.registry = `${registry === 'github' ? 'https://npm.pkg.github.com' : 'https://registry.npmjs.org'}/${owner}`;
     } else {
         package.name = projectName;
     }

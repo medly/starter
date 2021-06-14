@@ -2,6 +2,7 @@
     "name": "template",
     "version": "0.0.0",
     "description": "",
+    "private": true,
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
     "types": "dist/es/index.d.ts",
@@ -13,13 +14,13 @@
         "registry": "https://registry.npmjs.org/medly"
     },
     "scripts": {
-        "build": "cross-env BABEL_ENV=production rimraf dist  && rollup -c=./rollup.config.js",
+        "build": "rollup --config node_modules/@medly/rollup-config/index.js",
         "commit": "git-cz",
         "lint": "eslint 'src/**/*.ts'",
         "release": "semantic-release",
         "start": "ts-node ./src/index.ts",
         "pretest": "yarn typecheck",
-        "test": "jest --passWithNoTests -w=50%",
+        "test": "jest --passWithNoTests --coverage -w=50%",
         "typecheck": "tsc -p tsconfig.json"
     },
     "dependencies": [],
@@ -37,7 +38,6 @@
         "cz-conventional-changelog",
         "husky",
         "jest",
-        "rimraf",
         "ts-node"
     ],
     "config": {
@@ -63,14 +63,5 @@
     "prettier": "@medly/prettier-config",
     "eslintConfig": {
         "extends": "@medly"
-    },
-    "jest": {
-        "rootDir": "./",
-        "collectCoverage": true,
-        "collectCoverageFrom": ["<rootDir>/src/**"],
-        "coverageDirectory": "<rootDir>/coverage/",
-        "moduleFileExtensions": ["ts", "js"],
-        "testMatch": ["**/*.(spec|test).ts"],
-        "verbose": true
     }
 }

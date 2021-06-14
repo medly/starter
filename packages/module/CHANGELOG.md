@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/medly/starter/compare/@medly/create-module@0.2.0...@medly/create-module@0.3.0) (2021-06-14)
+
+
+### Features
+
+* remove jest config from module template ([f3e418b](https://github.com/medly/starter/commit/f3e418b440724724d710d3faf5692fbf04deb20b))
+
+
+
+
+
 # [0.2.0](https://github.com/medly/starter/compare/@medly/create-module@0.1.1...@medly/create-module@0.2.0) (2021-06-05)
 
 

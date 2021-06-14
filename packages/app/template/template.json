@@ -5,9 +5,10 @@
     "license": "ISC",
     "scripts": {
         "clean": "rimraf dist coverage",
-        "lint:css": "stylelint src/**/*.tsx",
-        "lint:ts": "eslint src/**/*.{ts,tsx}",
-        "lint": "run-p -c lint:*",
+        "lint:css": "stylelint 'src/**/*.tsx'",
+        "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
+        "lint": "run-p lint:ts lint:css",
+        "lint:fix": "run-p 'lint:ts --fix' 'lint:css --fix'",
         "test:update": "run-p test:types 'test:jest -- -u'",
         "test:watch": "run-p 'test:types -- -w' 'test:jest -- --watch'",
         "test:jest": "jest",
@@ -23,7 +24,7 @@
         }
     },
     "lint-staged": {
-        "src/**/*.{ts,tsx}": ["eslint 'src/**/*.tsx' --fix", "git add"]
+        "src/**/*.{ts,tsx}": ["eslint 'src/**/*.tsx' --fix", "stylelint 'src/**/*.tsx' --fix"]
     },
     "babel": {
         "extends": "@medly/babel-config-react"
@@ -67,7 +68,7 @@
         "@types/redux-mock-store",
         "@types/styled-components",
         "axios-mock-adapter",
-        "husky",
+        "husky@4.3.6",
         "lint-staged",
         "npm-run-all",
         "redux-devtools-extension",

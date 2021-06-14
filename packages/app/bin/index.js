@@ -51,7 +51,7 @@ async function init() {
     execSync('git init');
 
     // Installing dependencies
-    console.log(chalk.green('Installing dependencies'));
+    console.log('\nInstalling dependencies\n');
     installDependencies(packageManager);
 
     // Final messages

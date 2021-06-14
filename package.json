@@ -58,12 +58,19 @@
         "@medly/eslint-config": "^0.1.0",
         "@medly/prettier-config": "^0.1.0",
         "@medly/typescript-config": "^0.1.0",
+        "@medly/typescript-config-react": "^0.0.2",
+        "@types/react": "^17.0.11",
+        "@types/react-router-dom": "^5.1.7",
+        "@types/styled-components": "^5.1.10",
         "commitizen": "4.0.3",
         "cross-env": "^7.0.3",
         "cz-lerna-changelog": "^2.0.2",
         "husky": "^4.2.3",
         "jest": "^27.0.3",
         "lerna": "^3.20.2",
+        "react": "^17.0.2",
+        "react-router-dom": "^5.2.0",
+        "redux": "^4.1.0",
         "rimraf": "^3.0.1"
     }
 }

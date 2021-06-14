@@ -24,6 +24,7 @@
         "commander": "^7.2.0",
         "figlet": "^1.5.0",
         "fs-extra": "^9.1.0",
-        "inquirer": "^8.1.0"
+        "inquirer": "^8.1.0",
+        "@medly/starter-shared": "0.0.0"
     }
 }

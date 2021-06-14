@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/medly/starter/compare/@medly/create-module@0.4.0...@medly/create-module@0.4.1) (2021-06-14)
+
+
+### Bug Fixes
+
+* dependency warning ([c0f47fd](https://github.com/medly/starter/commit/c0f47fd83b57be096da5afa5b18deedaf48ff5e0))
+
+
+
+
+
 # [0.4.0](https://github.com/medly/starter/compare/@medly/create-module@0.3.0...@medly/create-module@0.4.0) (2021-06-14)
 
 

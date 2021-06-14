@@ -6,13 +6,12 @@ const chalk = require('chalk');
 const packageJson = require('../package.json');
 const template = path.join(__dirname, '../template');
 const { execSync } = require('child_process');
-const addProjectDetails = require('./addProjectDetails');
-const installDependencies = require('./installDependencies');
 const clear = require('clear');
 const figlet = require('figlet');
 const commander = require('commander');
 const { Option } = require('commander');
 const questions = require('./questions');
+const { addProjectDetails, installDependencies } = require('@medly/starter-shared');
 
 async function init() {
     let projectName;

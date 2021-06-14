@@ -1,0 +1,24 @@
+{
+    "name": "@medly/starter-shared",
+    "version": "0.0.0",
+    "description": "Shared code for all the medly starter kit packages",
+    "main": "./src/index.js",
+    "files": [
+        "src"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/medly"
+    },
+    "keywords": [
+        "Medly",
+        "start-kit",
+        "shared"
+    ],
+    "author": "Mukul Bansal",
+    "license": "ISC",
+    "peerDependencies": {
+        "fs-extra": "^10.0.0",
+        "chalk": "^4.1.1"
+    }
+}

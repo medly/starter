@@ -1,5 +1,10 @@
 {
     "extends": "@medly/typescript-config",
     "include": ["packages"],
-    "exclude": ["node_modules", "packages/**/dist"]
+    "exclude": ["node_modules", "packages/**/dist"],
+    "compilerOptions": {
+        "paths": {
+            "@medly/starter-shared": ["./packages/shared/src"]
+        }
+    }
 }

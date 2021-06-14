@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/medly/starter/compare/@medly/create-app@0.2.0...@medly/create-app@0.2.1) (2021-06-14)
+
+
+### Bug Fixes
+
+* lint issue in app template ([e746c8e](https://github.com/medly/starter/commit/e746c8eb1f3d00b7fa19d2cc4002af2766220366))
+
+
+
+
+
 # [0.2.0](https://github.com/medly/starter/compare/@medly/create-app@0.1.2...@medly/create-app@0.2.0) (2021-06-14)
 
 

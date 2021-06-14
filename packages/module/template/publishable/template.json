@@ -63,8 +63,5 @@
     "prettier": "@medly/prettier-config",
     "eslintConfig": {
         "extends": "@medly"
-    },
-    "jest": {
-        "collectCoverage": true
     }
 }

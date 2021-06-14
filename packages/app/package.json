@@ -1,7 +1,7 @@
 {
-    "name": "@medly/create-module",
-    "version": "0.4.1",
-    "description": "An application for generating either ts module or simple ts app",
+    "name": "@medly/create-app",
+    "version": "0.0.0",
+    "description": "An application for generating react app",
     "bin": "./bin/index.js",
     "files": [
         "bin",
@@ -13,13 +13,15 @@
     },
     "keywords": [
         "Medly",
-        "ts-module",
-        "start-kit"
+        "app",
+        "react-app",
+        "start-kit",
+        "react"
     ],
     "author": "Mukul Bansal",
     "license": "ISC",
     "dependencies": {
-        "@medly/starter-shared": "0.1.0",
+        "@medly/starter-shared": "^0.1.0",
         "chalk": "^4.1.1",
         "commander": "^7.2.0",
         "fs-extra": "^10.0.0",

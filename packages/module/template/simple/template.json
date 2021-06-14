@@ -19,6 +19,7 @@
         "@medly/prettier-config",
         "@medly/rollup-config",
         "@medly/typescript-config",
+        "@types/node",
         "jest",
         "ts-node"
     ],

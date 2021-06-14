@@ -77,6 +77,4 @@ async function init() {
     ]);
 }
 
-console.time(chalk.green('\n🌟 Done'));
 init();
-console.timeEnd(chalk.green('\n🌟 Done'));

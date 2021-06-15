@@ -68,7 +68,7 @@
         "@types/redux-mock-store",
         "@types/styled-components",
         "axios-mock-adapter",
-        "husky@4.3.6",
+        "husky@4.0.0",
         "lint-staged",
         "npm-run-all",
         "redux-devtools-extension",

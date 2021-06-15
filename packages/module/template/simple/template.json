@@ -17,7 +17,6 @@
         "@medly/babel-config",
         "@medly/eslint-config",
         "@medly/prettier-config",
-        "@medly/rollup-config",
         "@medly/typescript-config",
         "@types/node",
         "jest",

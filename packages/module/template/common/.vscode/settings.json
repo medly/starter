@@ -1,12 +1,10 @@
 {
     "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
-        "source.organizeImports": true
+        "source.organizeImports": true,
+        "source.fixAll.stylelint": true
     },
-    "eslint.validate": ["html", "javascript", "javascriptreact", "typescript", "typescriptreact"],
-    "files.exclude": {
-        "node_modules/": true,
-        "yarn.lock": true
-    }
+    "eslint.validate": ["html", "javascript", "javascriptreact", "typescript", "typescriptreact"]
 }

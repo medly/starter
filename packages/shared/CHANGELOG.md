@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/medly/starter/compare/@medly/starter-shared@0.2.2...@medly/starter-shared@0.3.0) (2021-06-15)
+
+
+### Features
+
+* migrate husky v4 to v6 for react app ([235d88b](https://github.com/medly/starter/commit/235d88b89d2d71d64d349f5135bb5deb025014fa))
+
+
+
+
+
 ## [0.2.2](https://github.com/medly/starter/compare/@medly/starter-shared@0.2.1...@medly/starter-shared@0.2.2) (2021-06-14)
 
 

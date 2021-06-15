@@ -1,6 +1,6 @@
 {
     "name": "@medly/starter-shared",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "description": "Shared code for all the medly starter kit packages",
     "main": "./src/index.js",
     "files": [

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/medly/starter/compare/@medly/create-app@0.3.0...@medly/create-app@0.3.1) (2021-06-15)
+
+
+### Bug Fixes
+
+* change order of installing dependencies to fix husky issue ([5b5ce0e](https://github.com/medly/starter/commit/5b5ce0e6922b93099308d19dc1038acaa7c5dc88))
+
+
+
+
+
 # [0.3.0](https://github.com/medly/starter/compare/@medly/create-app@0.2.2...@medly/create-app@0.3.0) (2021-06-15)
 
 

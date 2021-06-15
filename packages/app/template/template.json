@@ -53,6 +53,7 @@
         "styled-components"
     ],
     "devDependencies": [
+        "husky@4.3.8",
         "@medly/babel-config-react",
         "@medly/eslint-config-react",
         "@medly/prettier-config",
@@ -68,7 +69,6 @@
         "@types/redux-mock-store",
         "@types/styled-components",
         "axios-mock-adapter",
-        "husky@4.3.8",
         "lint-staged",
         "npm-run-all",
         "redux-devtools-extension",

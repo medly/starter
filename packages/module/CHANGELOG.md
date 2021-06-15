@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/medly/starter/compare/@medly/create-module@0.5.3...@medly/create-module@0.6.0) (2021-06-15)
+
+
+### Features
+
+* use latest husky 4 version ([b34c15f](https://github.com/medly/starter/commit/b34c15f6e29511af5b551cfd09f2349c0dd7308f))
+
+
+
+
+
 ## [0.5.3](https://github.com/medly/starter/compare/@medly/create-module@0.5.2...@medly/create-module@0.5.3) (2021-06-15)
 
 

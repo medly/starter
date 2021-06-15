@@ -7,10 +7,7 @@
         "source.fixAll.stylelint": true
     },
     "eslint.validate": ["html", "javascript", "javascriptreact", "typescript", "typescriptreact"],
-    "cSpell.words": [
-        "Medly",
-        "pnpm"
-    ],
+    "cSpell.words": ["Medly", "pnpm"],
     "files.exclude": {
         "node_modules/": true,
         "packages/**/dist/": true,

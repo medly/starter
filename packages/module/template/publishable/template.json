@@ -36,7 +36,7 @@
         "commitizen",
         "cross-env",
         "cz-conventional-changelog",
-        "husky",
+        "husky@4.0.0",
         "jest",
         "ts-node"
     ],

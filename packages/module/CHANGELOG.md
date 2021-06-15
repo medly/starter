@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/medly/starter/compare/@medly/create-module@0.5.2...@medly/create-module@0.5.3) (2021-06-15)
+
+
+### Bug Fixes
+
+* downgrade husky version for autoinstalling after first intallation ([64c5aef](https://github.com/medly/starter/commit/64c5aef578a39bcc0a0f442194627736fa7575d2))
+
+
+
+
+
 ## [0.5.2](https://github.com/medly/starter/compare/@medly/create-module@0.5.1...@medly/create-module@0.5.2) (2021-06-14)
 
 **Note:** Version bump only for package @medly/create-module

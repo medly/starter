@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/medly/starter/compare/@medly/create-app@0.2.1...@medly/create-app@0.2.2) (2021-06-15)
+
+
+### Bug Fixes
+
+* downgrade husky version for autoinstalling after first intallation ([64c5aef](https://github.com/medly/starter/commit/64c5aef578a39bcc0a0f442194627736fa7575d2))
+
+
+
+
+
 ## [0.2.1](https://github.com/medly/starter/compare/@medly/create-app@0.2.0...@medly/create-app@0.2.1) (2021-06-14)
 
 

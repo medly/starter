@@ -4,6 +4,8 @@
     "description": "",
     "license": "ISC",
     "scripts": {
+        "prepare": "husky install",
+        "pre-commit": "lint-staged",
         "clean": "rimraf dist coverage",
         "lint:css": "stylelint 'src/**/*.tsx'",
         "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
@@ -17,11 +19,6 @@
         "watch": "webpack serve --open --mode development --config node_modules/@medly/webpack-config",
         "dist": "webpack --mode production --progress --config node_modules/@medly/webpack-config",
         "dist:analyze": "npm run dist -- --analyze"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
     },
     "lint-staged": {
         "src/**/*.{ts,tsx}": ["eslint 'src/**/*.tsx' --fix", "stylelint 'src/**/*.tsx' --fix"]
@@ -53,7 +50,7 @@
         "styled-components"
     ],
     "devDependencies": [
-        "husky@4.3.8",
+        "husky",
         "@medly/babel-config-react",
         "@medly/eslint-config-react",
         "@medly/prettier-config",

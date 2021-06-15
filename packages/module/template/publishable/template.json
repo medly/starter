@@ -25,6 +25,7 @@
     },
     "dependencies": [],
     "devDependencies": [
+        "husky@4.3.8",
         "@commitlint/cli",
         "@commitlint/config-conventional",
         "@medly/babel-config",
@@ -36,7 +37,6 @@
         "commitizen",
         "cross-env",
         "cz-conventional-changelog",
-        "husky@4.3.8",
         "jest",
         "ts-node"
     ],

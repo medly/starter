@@ -8,7 +8,7 @@ const { execSync } = require('child_process');
 const questions = require('./questions');
 const { Option } = require('commander');
 const commander = require('commander');
-const { addProjectDetails, installDependencies, printMedly } = require('@medly/starter-shared');
+const { addProjectDetails, installDependencies, printMedly, updateHuskyCommands } = require('@medly/starter-shared');
 
 async function init() {
     let projectName;
@@ -53,6 +53,9 @@ async function init() {
     // Installing dependencies
     console.log('\nInstalling dependencies\n');
     installDependencies(packageManager);
+
+    // Update husky commands with chosen package manager
+    updateHuskyCommands(packageManager);
 
     // Final messages
     console.log(chalk.green('\n🚀 Success!') + ' Created ' + chalk.green(projectName) + ' at ' + chalk.green(projectRoot));

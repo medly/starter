@@ -1,0 +1,64 @@
+{
+    "name": "template",
+    "version": "0.0.0",
+    "description": "",
+    "private": true,
+    "main": "dist/cjs/index.js",
+    "module": "dist/es/index.js",
+    "types": "dist/es/index.d.ts",
+    "files": ["dist"],
+    "keywords": [],
+    "author": "Medly",
+    "license": "ISC",
+    "type": "module",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/medly"
+    },
+    "scripts": {
+        "build": "rollup --config node_modules/@medly/rollup-config/index.js",
+        "commit": "git-cz",
+        "lint": "eslint 'src/**/*.js'",
+        "release": "semantic-release",
+        "start": "node ./src/index.js",
+        "test": "jest --passWithNoTests --coverage -w=50%"
+    },
+    "dependencies": [],
+    "devDependencies": [
+        "husky@4.3.8",
+        "@commitlint/cli",
+        "@commitlint/config-conventional",
+        "@medly/babel-config",
+        "@medly/eslint-config",
+        "@medly/prettier-config",
+        "@medly/rollup-config",
+        "@medly/semantic-release-config",
+        "commitizen",
+        "cross-env",
+        "cz-conventional-changelog",
+        "jest"
+    ],
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "commitlint": {
+        "extends": ["@commitlint/config-conventional"]
+    },
+    "husky": {
+        "hooks": {
+            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "release": {
+        "extends": "@medly/semantic-release-config"
+    },
+    "babel": {
+        "extends": "@medly/babel-config"
+    },
+    "prettier": "@medly/prettier-config",
+    "eslintConfig": {
+        "extends": "@medly"
+    }
+}

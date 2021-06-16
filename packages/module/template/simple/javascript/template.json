@@ -1,0 +1,23 @@
+{
+    "name": "template",
+    "version": "0.0.0",
+    "description": "",
+    "private": true,
+    "keywords": [],
+    "license": "ISC",
+    "type": "module",
+    "scripts": {
+        "lint": "eslint 'src/**/*.js'",
+        "start": "node ./src/index.js",
+        "test": "jest --passWithNoTests --coverage -w=50%"
+    },
+    "dependencies": [],
+    "devDependencies": ["@medly/babel-config", "@medly/eslint-config", "@medly/prettier-config", "jest"],
+    "babel": {
+        "extends": "@medly/babel-config"
+    },
+    "prettier": "@medly/prettier-config",
+    "eslintConfig": {
+        "extends": "@medly"
+    }
+}

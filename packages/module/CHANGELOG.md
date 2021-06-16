@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/medly/starter/compare/@medly/create-module@0.6.3...@medly/create-module@0.7.0) (2021-06-16)
+
+
+### Features
+
+* add javascript support for creating module ([022bc3a](https://github.com/medly/starter/commit/022bc3a0e6650d58c88bde417296aaad21e74faa))
+
+
+
+
+
 ## [0.6.3](https://github.com/medly/starter/compare/@medly/create-module@0.6.2...@medly/create-module@0.6.3) (2021-06-15)
 
 **Note:** Version bump only for package @medly/create-module

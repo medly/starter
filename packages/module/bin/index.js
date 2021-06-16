@@ -4,11 +4,11 @@ const fs = require('fs-extra');
 const path = require('path');
 const chalk = require('chalk');
 const packageJson = require('../package.json');
-const template = path.join(__dirname, '../template');
 const { execSync } = require('child_process');
 const commander = require('commander');
 const { Option } = require('commander');
 const questions = require('./questions');
+const copyTemplateFiles = require('./copyTemplateFiles');
 const { addProjectDetails, installDependencies, printMedly } = require('@medly/starter-shared');
 
 async function init() {
@@ -25,6 +25,7 @@ async function init() {
         .addOption(
             new Option('-p, --package-manager  <package-manager>', 'package manager').choices(['npm', 'yarn', 'pnpm']).default('yarn')
         )
+        .addOption(new Option('-l, --language  <language>', 'language').choices(['typescript', 'javascript']).default('typescript'))
         .option('-i, --interactive', 'show interactive questionnaire')
         .description('An application for generating either ts module or simple ts app')
         .usage(`${chalk.green('<project-name>')} [options]`)
@@ -37,8 +38,9 @@ async function init() {
         })
         .parse(process.argv);
 
-    const options = program.opts(),
-        { registry, packageManager } = options.interactive ? await questions() : options;
+    const commanderOptions = program.opts(),
+        options = commanderOptions.interactive ? await questions() : commanderOptions,
+        { registry, packageManager } = options;
 
     // Create project directory
     const projectRoot = path.resolve(projectName);
@@ -46,8 +48,7 @@ async function init() {
     console.log('Creating the project at ' + chalk.green(projectRoot));
 
     // Copying template files
-    fs.copySync(path.join(template, 'common'), projectRoot);
-    registry ? fs.copySync(path.join(template, 'publishable'), projectRoot) : fs.copySync(path.join(template, 'simple'), projectRoot);
+    copyTemplateFiles(projectName, options);
 
     // Add project details
     addProjectDetails(projectName, options);
@@ -69,7 +70,13 @@ async function init() {
     console.table([
         { command: `${packageManager} start`, description: 'To start the project' },
         { command: `${packageManager} test`, description: 'To run the jest tests' },
-        { command: `${packageManager} lint`, description: 'To run eslint' }
+        { command: `${packageManager} lint`, description: 'To run eslint' },
+        ...(registry && registry !== 'none'
+            ? [
+                  { command: `${packageManager} build`, description: 'To create the bundle' },
+                  { command: `${packageManager} commit`, description: 'Show interactive prompt to write conventional commit' }
+              ]
+            : [])
     ]);
 }
 

@@ -9,6 +9,7 @@ module.exports = (projectName, { registry, owner }) => {
     fs.removeSync(path.join(projectRoot, 'template.json'));
 
     // Update basic details based on the options chosen
+    package.author = owner || '';
     if (registry) {
         package.name = `@${owner}/${projectName}`;
         package.repository = {

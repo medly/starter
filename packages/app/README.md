@@ -1,6 +1,6 @@
 # Create react app
 
-An application for generating simple react app
+An application for generating simple react app.
 
 ## Getting started
 

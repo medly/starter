@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/medly/starter/compare/@medly/create-module@0.7.0...@medly/create-module@0.7.1) (2021-06-18)
+
+**Note:** Version bump only for package @medly/create-module
+
+
+
+
+
 # [0.7.0](https://github.com/medly/starter/compare/@medly/create-module@0.6.3...@medly/create-module@0.7.0) (2021-06-16)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/medly/starter/compare/@medly/starter-shared@0.4.0...@medly/starter-shared@0.4.1) (2021-06-18)
+
+
+### Bug Fixes
+
+* registry issue if the value is none ([f8529ee](https://github.com/medly/starter/commit/f8529ee52d60fb31dc75fd8f8034af785be347bf))
+
+
+
+
+
 # [0.4.0](https://github.com/medly/starter/compare/@medly/starter-shared@0.3.0...@medly/starter-shared@0.4.0) (2021-06-16)
 
 

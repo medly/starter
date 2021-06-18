@@ -10,7 +10,7 @@ module.exports = (projectName, { registry, owner }) => {
 
     // Update basic details based on the options chosen
     package.author = owner || '';
-    if (registry) {
+    if (registry && registry !== `none`) {
         package.name = `@${owner}/${projectName}`;
         package.repository = {
             type: 'git',

@@ -13,7 +13,7 @@ module.exports = packageManager => {
     package.devDependencies = {};
 
     // Change command based on the package manager choice
-    package = JSON.parse(JSON.stringify(package).replace(/yarn/g, packageManager));
+    package = JSON.parse(JSON.stringify(package).replace(/yarn/g, packageManager === 'npm' ? 'npm run' : packageManager));
 
     // Write updated package.json
     fs.writeJSONSync(path.join('package.json'), package, {

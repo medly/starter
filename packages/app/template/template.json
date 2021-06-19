@@ -50,7 +50,7 @@
         "styled-components"
     ],
     "devDependencies": [
-        "husky",
+        "husky@6.0.0",
         "@medly/babel-config-react",
         "@medly/eslint-config-react",
         "@medly/prettier-config",

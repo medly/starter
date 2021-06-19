@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/medly/starter/compare/@medly/create-app@0.4.3...@medly/create-app@0.5.0) (2021-06-19)
+
+
+### Features
+
+* add proper error handling if something fails while creating module/app ([b96b87a](https://github.com/medly/starter/commit/b96b87aa3eb0537601ecb11974833939f1ddad6e))
+
+
+
+
+
 ## [0.4.3](https://github.com/medly/starter/compare/@medly/create-app@0.4.2...@medly/create-app@0.4.3) (2021-06-18)
 
 **Note:** Version bump only for package @medly/create-app

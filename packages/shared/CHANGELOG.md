@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/medly/starter/compare/@medly/starter-shared@0.5.0...@medly/starter-shared@0.5.1) (2021-06-19)
+
+
+### Bug Fixes
+
+* add npm run in case of package manager as npm ([0a49af2](https://github.com/medly/starter/commit/0a49af28d30861eef02df4e4c0c5b927f2852ec0))
+
+
+
+
+
 # [0.5.0](https://github.com/medly/starter/compare/@medly/starter-shared@0.4.1...@medly/starter-shared@0.5.0) (2021-06-19)
 
 

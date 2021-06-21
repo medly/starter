@@ -26,7 +26,7 @@
         "clean": "lerna clean && rimraf yarn.lock && rimraf node_modules",
         "lint": "eslint 'packages/**/*.{js, ts}'",
         "link:packages": "lerna link && lerna exec -- yarn link",
-        "release": "cross-env HUSKY_BYPASS=true lerna publish"
+        "release": "cross-env HUSKY=0 lerna publish"
     },
     "config": {
         "commitizen": {

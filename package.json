@@ -26,7 +26,7 @@
         "clean": "lerna clean && rimraf yarn.lock && rimraf node_modules",
         "lint": "eslint 'packages/**/*.{js, ts}'",
         "link:packages": "lerna link && lerna exec -- yarn link",
-        "release": "cross-env HUSKY_BYPASS=true lerna publish"
+        "release": "cross-env HUSKY=0 lerna publish"
     },
     "config": {
         "commitizen": {
@@ -37,12 +37,6 @@
         "extends": [
             "@commitlint/config-lerna-scopes"
         ]
-    },
-    "husky": {
-        "hooks": {
-            "prepare-commit-msg": "[[ -n $HUSKY_BYPASS ]] || exec < /dev/tty && git cz --hook || true",
-            "commit-msg": "[[ -n $HUSKY_BYPASS ]] || commitlint -E HUSKY_GIT_PARAMS"
-        }
     },
     "prettier": "@medly/prettier-config",
     "eslintConfig": {

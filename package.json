@@ -38,12 +38,6 @@
             "@commitlint/config-lerna-scopes"
         ]
     },
-    "husky": {
-        "hooks": {
-            "prepare-commit-msg": "[[ -n $HUSKY_BYPASS ]] || exec < /dev/tty && git cz --hook || true",
-            "commit-msg": "[[ -n $HUSKY_BYPASS ]] || commitlint -E HUSKY_GIT_PARAMS"
-        }
-    },
     "prettier": "@medly/prettier-config",
     "eslintConfig": {
         "extends": "@medly"

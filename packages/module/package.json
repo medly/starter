@@ -1,6 +1,6 @@
 {
     "name": "@medly/create-module",
-    "version": "0.8.2",
+    "version": "0.9.0",
     "description": "An application for generating either ts module or simple ts app",
     "bin": "./bin/index.js",
     "files": [

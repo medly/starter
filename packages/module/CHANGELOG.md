@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/medly/starter/compare/@medly/create-module@0.8.2...@medly/create-module@0.9.0) (2021-06-21)
+
+
+### Bug Fixes
+
+* remove husky hook values form package.json ([a97408e](https://github.com/medly/starter/commit/a97408e8e116c332bdcfa4d1af1a00d778c9ee0d))
+
+
+### Features
+
+* upgrade husky version to 6 ([d3d6575](https://github.com/medly/starter/commit/d3d6575f608bfa489fc6855f60f0cdd7d962a980))
+
+
+
+
+
 ## [0.8.2](https://github.com/medly/starter/compare/@medly/create-module@0.8.1...@medly/create-module@0.8.2) (2021-06-21)
 
 **Note:** Version bump only for package @medly/create-module

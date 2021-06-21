@@ -14,8 +14,8 @@
         "registry": "https://registry.npmjs.org/medly"
     },
     "scripts": {
+        "prepare": "husky install",
         "build": "rollup --config node_modules/@medly/rollup-config/index.js",
-        "commit": "git-cz",
         "lint": "eslint 'src/**/*.js'",
         "release": "semantic-release",
         "start": "node ./src/index.js",
@@ -23,7 +23,7 @@
     },
     "dependencies": [],
     "devDependencies": [
-        "husky@4.3.8",
+        "husky@6.0.0",
         "@commitlint/cli",
         "@commitlint/config-conventional",
         "@medly/babel-config",

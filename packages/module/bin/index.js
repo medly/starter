@@ -72,13 +72,12 @@ async function init() {
             { command: `${packageManager} start`, description: 'To start the project' },
             { command: `${packageManager} test`, description: 'To run the jest tests' },
             { command: `${packageManager} lint`, description: 'To run eslint' },
-            ...(registry && registry !== 'none'
-                ? [
-                      { command: `${packageManager} build`, description: 'To create the bundle' },
-                      { command: `${packageManager} commit`, description: 'Show interactive prompt to write conventional commit' }
-                  ]
-                : [])
+            ...(registry && registry !== 'none' ? [{ command: `${packageManager} build`, description: 'To create the bundle' }] : [])
         ]);
+
+        registry &&
+            registry !== 'none' &&
+            console.log('\nAdd ' + chalk.green('NPM_TOKEN') + ' as secret in github repo to publish the package.');
     } catch (error) {
         printGenericError(error);
     }

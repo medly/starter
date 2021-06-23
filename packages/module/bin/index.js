@@ -12,7 +12,7 @@ const copyTemplateFiles = require('./copyTemplateFiles');
 const { addProjectDetails, installDependencies, printMedly, printGenericError } = require('@medly/starter-shared');
 
 async function init() {
-    let projectName;
+    let cmdProjectName;
 
     try {
         printMedly();
@@ -20,7 +20,7 @@ async function init() {
         // Command information
         const program = new commander.Command(packageJson.name)
             .version(packageJson.version)
-            .arguments('<project-name>')
+            .arguments('[project-name]')
             .option('-o, --owner <owner>', 'owner of the package')
             .addOption(new Option('-r, --registry <registry>', 'registry to publish the module').choices(['npm', 'github']))
             .addOption(
@@ -32,16 +32,16 @@ async function init() {
             .usage(`${chalk.green('<project-name>')} [options]`)
             .action((name, options) => {
                 if (options.registry && !options.owner) {
-                    console.error('Error: Owner of the repo required when you add registry option');
+                    console.error(chalk.red('Error: ') + '-o, --owner <owner> required when you have added registry option');
                     process.exit(1);
                 }
-                projectName = name;
+                cmdProjectName = name;
             })
             .parse(process.argv);
 
         const commanderOptions = program.opts(),
-            options = commanderOptions.interactive ? await questions() : commanderOptions,
-            { registry, packageManager } = options;
+            options = await questions({ ...commanderOptions, projectName: cmdProjectName }),
+            { registry, packageManager, projectName } = options;
 
         // Create project directory
         const projectRoot = path.resolve(projectName);
@@ -49,10 +49,10 @@ async function init() {
         console.log('Creating the project at ' + chalk.green(projectRoot));
 
         // Copying template files
-        copyTemplateFiles(projectName, options);
+        copyTemplateFiles(options);
 
         // Add project details
-        addProjectDetails(projectName, options);
+        addProjectDetails(options);
 
         // Move to project directory
         process.chdir(projectRoot);

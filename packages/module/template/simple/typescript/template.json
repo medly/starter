@@ -14,13 +14,13 @@
     },
     "dependencies": [],
     "devDependencies": [
-        "@medly/babel-config",
-        "@medly/eslint-config",
-        "@medly/prettier-config",
-        "@medly/typescript-config",
-        "@types/node",
-        "jest",
-        "ts-node"
+        "@medly/babel-config@latest",
+        "@medly/eslint-config@latest",
+        "@medly/prettier-config@latest",
+        "@medly/typescript-config@latest",
+        "@types/node@latest",
+        "jest@latest",
+        "ts-node@latest"
     ],
     "babel": {
         "extends": "@medly/babel-config"

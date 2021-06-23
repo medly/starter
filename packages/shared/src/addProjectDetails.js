@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 
-module.exports = (projectName, { registry, owner }) => {
+module.exports = ({ projectName, registry, owner }) => {
     const projectRoot = path.resolve(projectName),
         package = fs.readJSONSync(path.join(projectRoot, 'template.json'));
 

@@ -1,19 +1,51 @@
 const inquirer = require('inquirer');
+const chalk = require('chalk');
 
-const questions = [
+const questions = cmdOptions => [
+    {
+        type: 'input',
+        name: 'projectName',
+        message: 'Project Name',
+        default: 'medly-module',
+        when: () => !cmdOptions.projectName
+    },
+    {
+        type: 'list',
+        name: 'registry',
+        message: 'Registry to publish the module',
+        choices: ['none', 'github', 'npm'],
+        default: cmdOptions.registry || 'none',
+        when: () => !cmdOptions.projectName || cmdOptions.interactive
+    },
     {
         type: 'input',
         name: 'owner',
         message: 'Owner of the package',
-        when(answers) {
-            return answers.registry !== 'none';
-        }
+        when: answers => !cmdOptions.owner && answers.registry && answers.registry !== 'none'
     },
-    { type: 'list', name: 'language', message: 'Language', choices: ['typescript', 'javascript'], default: 'typescript' },
-    { type: 'list', name: 'registry', message: 'Registry to publish the module', choices: ['none', 'github', 'npm'], default: 'none' },
-    { type: 'list', name: 'packageManager', message: 'Package Manager', choices: ['npm', 'yarn', 'pnpm'], default: 'yarn' }
+    {
+        type: 'list',
+        name: 'language',
+        message: 'Language',
+        choices: [
+            { name: chalk.hex('#007acc')('typescript'), value: 'typescript' },
+            { name: chalk.yellow('javascript'), value: 'javascript' }
+        ],
+        default: cmdOptions.language,
+        when: () => !cmdOptions.projectName || cmdOptions.interactive
+    },
+    {
+        type: 'list',
+        name: 'packageManager',
+        message: 'Package Manager',
+        choices: [
+            { name: chalk.hex('#CC3534')('npm'), value: 'npm' },
+            { name: chalk.hex('#2C8EBB')('yarn'), value: 'yarn' },
+            { name: chalk.hex('#F9AD00')('pnpm'), value: 'pnpm' }
+        ],
+        default: cmdOptions.packageManager,
+        when: () => !cmdOptions.projectName || cmdOptions.interactive
+    }
 ];
 
-module.exports = async function () {
-    return inquirer.prompt(questions);
-};
+module.exports = async cmdOptions => ({ ...cmdOptions, ...(await inquirer.prompt(questions(cmdOptions))) });

@@ -4,7 +4,7 @@ An application for generating simple react app.
 
 ## Getting started
 
-**Usage**: `yarn create @medly/app <project-name> [options]` OR `yarn create @medly/app <project-name> -i`
+**Usage**: `yarn create @medly/app <project-name> [options]` OR `yarn create @medly/app`
 
 ### Options
 

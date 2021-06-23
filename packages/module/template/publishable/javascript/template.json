@@ -24,17 +24,17 @@
     "dependencies": [],
     "devDependencies": [
         "husky@6.0.0",
-        "@commitlint/cli",
-        "@commitlint/config-conventional",
-        "@medly/babel-config",
-        "@medly/eslint-config",
-        "@medly/prettier-config",
-        "@medly/rollup-config",
-        "@medly/semantic-release-config",
-        "commitizen",
-        "cross-env",
-        "cz-conventional-changelog",
-        "jest"
+        "@commitlint/cli@latest",
+        "@commitlint/config-conventional@latest",
+        "@medly/babel-config@latest",
+        "@medly/eslint-config@latest",
+        "@medly/prettier-config@latest",
+        "@medly/rollup-config@latest",
+        "@medly/semantic-release-config@latest",
+        "commitizen@latest",
+        "cross-env@latest",
+        "cz-conventional-changelog@latest",
+        "jest@latest"
     ],
     "config": {
         "commitizen": {

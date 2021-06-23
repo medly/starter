@@ -1,6 +1,6 @@
 {
     "name": "@medly/create-app",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "description": "An application for generating react app",
     "bin": "./bin/index.js",
     "files": [
@@ -21,7 +21,7 @@
     "author": "Mukul Bansal",
     "license": "ISC",
     "dependencies": {
-        "@medly/starter-shared": "0.5.1",
+        "@medly/starter-shared": "0.5.2",
         "chalk": "^4.1.1",
         "commander": "^7.2.0",
         "fs-extra": "^10.0.0",

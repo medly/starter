@@ -37,3 +37,6 @@ It sets up below things:
 5. `github workflow` to automatically `publish the package on PR merge`.
 6. `semantic-release` to bump the version and update the `CHANGELOG`.
 7. `typescript` also, if you choose `typescript` as language option.
+
+
+![create-module](https://user-images.githubusercontent.com/3636885/123096440-bab59f00-d44c-11eb-9df0-412145d21abc.gif)

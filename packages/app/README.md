@@ -23,11 +23,13 @@ Then follow the prompts or you can run command `yarn create @medly/app <project-
 
 ## Features
 
-1. It sets up `babel` to `transpile` the code.
-2. it sets up `jest` to write `unit tests`.
-3. It sets up `webpack` to `bundle` the code.
-4. It sets up `prettier` to automatically `format` the code.
-5. It sets up `eslint` to catch the error.
-6. It sets up `@medly-components` with theme.
-7. It sets up `redux` to store the app state.
-8. It provides basic `layout` also.
+It sets up below things:
+
+1. `babel` to `transpile` the code.
+2. `jest` to write `unit tests`.
+3. `webpack` to `bundle` the code.
+4. `prettier` to automatically `format` the code.
+5. `eslint` to catch the error.
+6. `@medly-components` with theme.
+7. `redux` to store the app state.
+8. Basic `PageLayout` with `Header`, `SideNav` & `PageContent` component.

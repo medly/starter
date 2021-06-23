@@ -28,10 +28,12 @@ Then follow the prompts or you can run command `yarn create @medly/module <proje
 
 ## Features
 
-1. It sets up `babel` to `transpile` the code.
-2. it sets up `jest` to write `unit tests`.
-3. It sets up `rollup` to `bundle` the code.
-4. It sets up `commitizen` & `commitlint` to optimize your commit message.
-5. It sets up `github workflow` to automatically `publish the package on PR merge`.
-6. It sets up `semantic-release` to bump the version and update the `CHANGELOG`.
-7. It sets up `typescript` also, if you choose `typescript` as language option.
+It sets up below things:
+
+1. `babel` to `transpile` the code.
+2. `jest` to write `unit tests`.
+3. `rollup` to `bundle` the code.
+4. `commitizen` & `commitlint` to optimize your commit message.
+5. `github workflow` to automatically `publish the package on PR merge`.
+6. `semantic-release` to bump the version and update the `CHANGELOG`.
+7. `typescript` also, if you choose `typescript` as language option.

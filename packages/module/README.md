@@ -4,7 +4,13 @@ An application for generating either module or simple app. You can also choose b
 
 ## Getting started
 
-**Usage**: `yarn create @medly/module` OR `yarn create @medly/module <project-name> [options]`
+| Package Manager | Command                     |
+| --------------- | --------------------------- |
+| NPM             | `npm init @medly/module`    |
+| Yarn            | `yarn create @medly/module` |
+| PNPM            | `pnpx @medly/create-module` |
+
+Then follow the prompts or you can run command `yarn create @medly/module <project-name> [options]` with below options.
 
 ### Options
 

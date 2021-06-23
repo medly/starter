@@ -4,7 +4,13 @@ An application for generating simple react app.
 
 ## Getting started
 
-**Usage**: `yarn create @medly/app` OR `yarn create @medly/app <project-name> [options]`
+| Package Manager | Command                  |
+| --------------- | ------------------------ |
+| NPM             | `npm init @medly/app`    |
+| Yarn            | `yarn create @medly/app` |
+| PNPM            | `pnpx @medly/create-app` |
+
+Then follow the prompts or you can run command `yarn create @medly/app <project-name> [options]` with below options.
 
 ### Options
 

@@ -1,10 +1,10 @@
-# Create typescript module
+# Create Module
 
-An application for generating either ts module or simple ts app. You can also choose between `typescript` & `javascript` language.
+An application for generating either module or simple app. You can also choose between `typescript` & `javascript` language.
 
 ## Getting started
 
-**Usage**: `yarn create @medly/module <project-name> [options]` OR `yarn create @medly/module`
+**Usage**: `yarn create @medly/module` OR `yarn create @medly/module <project-name> [options]`
 
 ### Options
 

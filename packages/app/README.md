@@ -1,10 +1,10 @@
-# Create react app
+# Create Web App
 
 An application for generating simple react app.
 
 ## Getting started
 
-**Usage**: `yarn create @medly/app <project-name> [options]` OR `yarn create @medly/app`
+**Usage**: `yarn create @medly/app` OR `yarn create @medly/app <project-name> [options]`
 
 ### Options
 

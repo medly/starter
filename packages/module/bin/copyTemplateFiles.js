@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 
-module.exports = (projectName, { registry, language }) => {
+module.exports = ({ projectName, registry, language }) => {
     const projectRoot = path.resolve(projectName),
         template = path.join(__dirname, '../template');
 

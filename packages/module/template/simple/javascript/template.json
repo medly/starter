@@ -12,7 +12,7 @@
         "test": "jest --passWithNoTests --coverage -w=50%"
     },
     "dependencies": [],
-    "devDependencies": ["@medly/babel-config", "@medly/eslint-config", "@medly/prettier-config", "jest"],
+    "devDependencies": ["@medly/babel-config@latest", "@medly/eslint-config@latest", "@medly/prettier-config@latest", "jest@latest"],
     "babel": {
         "extends": "@medly/babel-config"
     },

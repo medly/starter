@@ -11,7 +11,7 @@ const commander = require('commander');
 const { addProjectDetails, installDependencies, printMedly, updateHuskyCommands, printGenericError } = require('@medly/starter-shared');
 
 async function init() {
-    let projectName;
+    let cmdProjectName;
 
     try {
         printMedly();
@@ -19,7 +19,7 @@ async function init() {
         // Command information
         const program = new commander.Command(packageJson.name)
             .version(packageJson.version)
-            .arguments('<project-name>')
+            .arguments('[project-name]')
             .addOption(
                 new Option('-p, --package-manager  <package-manager>', 'package manager').choices(['npm', 'yarn', 'pnpm']).default('yarn')
             )
@@ -27,12 +27,13 @@ async function init() {
             .description('An application for generating either ts module or simple ts app')
             .usage(`${chalk.green('<project-name>')} [options]`)
             .action(name => {
-                projectName = name;
+                cmdProjectName = name;
             })
             .parse(process.argv);
 
-        const options = program.opts(),
-            { packageManager } = options.interactive ? await questions() : options;
+        const commanderOptions = program.opts(),
+            options = await questions({ ...commanderOptions, projectName: cmdProjectName }),
+            { packageManager, projectName } = options;
 
         // Create project directory
         const projectRoot = path.resolve(projectName);
@@ -43,7 +44,7 @@ async function init() {
         fs.copySync(template, projectRoot);
 
         // Add project details
-        addProjectDetails(projectName, options);
+        addProjectDetails(options);
 
         // Move to project directory
         process.chdir(projectRoot);

@@ -4,7 +4,7 @@ An application for generating either ts module or simple ts app. You can also ch
 
 ## Getting started
 
-**Usage**: `yarn create @medly/module <project-name> [options]` OR `yarn create @medly/module <project-name> -i`
+**Usage**: `yarn create @medly/module <project-name> [options]` OR `yarn create @medly/module`
 
 ### Options
 

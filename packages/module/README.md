@@ -14,12 +14,24 @@ Then follow the prompts or you can run command `yarn create @medly/module <proje
 
 ### Options
 
-| Flags                                   | Description                    | Choices                    | Default      |
-| --------------------------------------- | ------------------------------ | -------------------------- | ------------ |
-| -V, --version                           | output the version number      |                            |              |
-| -o, --owner <owner>                     | owner of the package           |                            |              |
-| -r, --registry <registry>               | registry to publish the module | `npm`, `github`            |              |
-| -p, --package-manager <package-manager> | package manager                | `npm`, `yarn`, `pnpm`      | `yarn`       |
-| -l, --language <language>               | language                       | `typescript`, `javascript` | `typescript` |
-| -i, --interactive                       | show interactive questionnaire |                            |              |
-| -h, --help                              | display help for command       |                            |              |
+| Flags                                     | Description                    | Choices                    | Default      |
+| ----------------------------------------- | ------------------------------ | -------------------------- | ------------ |
+| `-V, --version`                           | output the version number      |                            |              |
+| `-o, --owner <owner>`                     | owner of the package           |                            |              |
+| `-r, --registry <registry>`               | registry to publish the module | `npm`, `github`            |              |
+| `-p, --package-manager <package-manager>` | package manager                | `npm`, `yarn`, `pnpm`      | `yarn`       |
+| `-l, --language <language>`               | language                       | `typescript`, `javascript` | `typescript` |
+| `-i, --interactive`                       | show interactive questionnaire |                            |              |
+| `-h, --help`                              | display help for command       |                            |              |
+
+> **Note:** Add `NPM_TOKEN` as secret in github repo to publish the package.
+
+## Features
+
+1. It sets up `babel` to `transpile` the code.
+2. it sets up `jest` to write `unit tests`.
+3. It sets up `rollup` to `bundle` the code.
+4. It sets up `commitizen` & `commitlint` to optimize your commit message.
+5. It sets up `github workflow` to automatically `publish the package on PR merge`.
+6. It sets up `semantic-release` to bump the version and update the `CHANGELOG`.
+7. It sets up `typescript` also, if you choose `typescript` as language option.

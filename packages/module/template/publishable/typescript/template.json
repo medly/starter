@@ -16,7 +16,7 @@
         "prepare": "husky install",
         "build": "rollup --config node_modules/@medly/rollup-config/index.js",
         "lint": "eslint 'src/**/*.ts'",
-        "release": "semantic-release",
+        "release": "HUSKY=0 semantic-release",
         "start": "ts-node ./src/index.ts",
         "pretest": "yarn typecheck",
         "test": "jest --passWithNoTests --coverage -w=50%",

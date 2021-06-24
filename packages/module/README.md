@@ -28,7 +28,7 @@ Then follow the prompts or you can run command `yarn create @medly/module <proje
 
 ## Features
 
-It sets up below things:
+It sets up the following:
 
 1. `babel` to `transpile` the code.
 2. `jest` to write `unit tests`.

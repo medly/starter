@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render properly with "outlined" variant 1`] = `
+.c0 {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid blue;
+  background-color: white;
+  color: blue;
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button should render properly with "solid" variant 1`] = `
+.c0 {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 0;
+  background-color: blue;
+  color: white;
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    Button
+  </button>
+</div>
+`;

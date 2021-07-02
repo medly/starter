@@ -1,0 +1,5 @@
+{
+    "extends": "@medly/typescript-config-react",
+    "include": ["src", "types"],
+    "exclude": ["node_modules", "dist", "coverage", "**/*.stories.mdx"]
+}

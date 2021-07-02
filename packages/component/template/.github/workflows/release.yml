@@ -1,0 +1,43 @@
+name: Release
+
+on:
+    pull_request:
+        branches:
+            - main
+        types: [closed]
+
+jobs:
+    release:
+        if: github.event.pull_request.merged == true
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v2
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: '14.x'
+
+            - name: Install dependencies
+              run: yarn
+
+            - name: Linting
+              run: yarn lint
+
+            - name: Run Tests
+              run: yarn test
+
+            - name: Build package
+              run: yarn dist
+
+            - name: Publish packages
+              run: yarn release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Deploy storybook
+              run: yarn storybook:deploy -- --ci
+              env:
+                  GH_TOKEN: ${{ secrets.ADMIN_TOKEN }}

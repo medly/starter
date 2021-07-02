@@ -1,0 +1,30 @@
+{
+    "name": "@medly/create-component",
+    "version": "0.5.2",
+    "description": "An application for generating react component",
+    "bin": "./bin/index.js",
+    "files": [
+        "bin",
+        "template"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/medly"
+    },
+    "keywords": [
+        "Medly",
+        "component",
+        "react-component",
+        "start-kit",
+        "react"
+    ],
+    "author": "Mukul Bansal",
+    "license": "ISC",
+    "dependencies": {
+        "@medly/starter-shared": "0.5.2",
+        "chalk": "^4.1.1",
+        "commander": "^7.2.0",
+        "fs-extra": "^10.0.0",
+        "inquirer": "^8.1.0"
+    }
+}

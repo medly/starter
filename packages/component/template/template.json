@@ -1,0 +1,102 @@
+{
+    "name": "@medlypharmacy/button-comp-test",
+    "version": "1.1.3",
+    "description": "",
+    "license": "ISC",
+    "sideEffects": false,
+    "main": "dist/cjs/index.js",
+    "module": "dist/es/index.js",
+    "types": "dist/es/index.d.ts",
+    "files": ["dist"],
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/medly"
+    },
+    "scripts": {
+        "prepare": "husky install",
+        "pre-commit": "lint-staged",
+        "clean": "rimraf dist coverage",
+        "lint:css": "stylelint 'src/**/*.tsx'",
+        "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
+        "lint": "run-p lint:ts lint:css",
+        "lint:fix": "run-p 'lint:ts --fix' 'lint:css --fix'",
+        "test:update": "run-p test:types 'test:jest -- -u'",
+        "test:watch": "run-p 'test:types -- -w' 'test:jest -- --watch'",
+        "test:types": "tsc",
+        "pretest": "yarn test:types",
+        "test": "jest --passWithNoTests --coverage -w=50%",
+        "dist": "cross-env NODE_ENV=production rollup --config node_modules/@medly/rollup-config/index.js",
+        "storybook": "start-storybook -p 6006",
+        "prestorybook:build": "rimraf out",
+        "storybook:build": "build-storybook -c .storybook -o .out",
+        "prestorybook:deploy": "yarn storybook:build --quiet",
+        "storybook:deploy": "storybook-to-ghpages --ci --existing-output-dir=.out",
+        "release": "cross-env HUSKY=0 semantic-release"
+    },
+    "babel": {
+        "extends": "@medly/babel-config-react"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "commitlint": {
+        "extends": ["@commitlint/config-conventional"]
+    },
+    "eslintConfig": {
+        "parser": "@typescript-eslint/parser",
+        "extends": "@medly/react"
+    },
+    "lint-staged": {
+        "src/**/*.{ts,tsx}": ["eslint 'src/**/*.tsx' --fix", "stylelint 'src/**/*.tsx' --fix"]
+    },
+    "prettier": "@medly/prettier-config",
+    "release": {
+        "extends": "@medly/semantic-release-config"
+    },
+    "stylelint": {
+        "extends": "@medly/stylelint-config"
+    },
+    "peerDependencies": {
+        "@medly-components/theme": ">=1",
+        "@medly-components/utils": ">=1",
+        "react": ">=16",
+        "react-dom": ">=16",
+        "styled-components": ">=5"
+    },
+    "devDependencies": [
+        "@commitlint/cli@latest",
+        "@commitlint/config-conventional@latest",
+        "@medly-components/theme@latest",
+        "@medly-components/utils@latest",
+        "@medly/babel-config-react@latest",
+        "@medly/eslint-config-react@latest",
+        "@medly/jest-config-react@latest",
+        "@medly/prettier-config@latest",
+        "@medly/rollup-config@latest",
+        "@medly/semantic-release-config@latest",
+        "@medly/stylelint-config@latest",
+        "@medly/typescript-config-react@latest",
+        "@medly/webpack-config@latest",
+        "@storybook/addon-actions@latest",
+        "@storybook/addon-essentials@latest",
+        "@storybook/addon-links@latest",
+        "@storybook/react@latest",
+        "@storybook/storybook-deployer@latest",
+        "@testing-library/react@latest",
+        "@types/react@latest",
+        "@types/react-dom@latest",
+        "@types/styled-components@latest",
+        "commitizen@latest",
+        "cross-env@latest",
+        "cz-conventional-changelog@latest",
+        "husky@latest",
+        "jest@latest",
+        "lint-staged@latest",
+        "npm-run-all@latest",
+        "react@latest",
+        "react-dom@latest",
+        "rimraf@latest",
+        "styled-components@latest"
+    ]
+}

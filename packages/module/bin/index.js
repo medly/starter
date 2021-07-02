@@ -9,10 +9,10 @@ const commander = require('commander');
 const { Option } = require('commander');
 const questions = require('./questions');
 const copyTemplateFiles = require('./copyTemplateFiles');
-const { addProjectDetails, installDependencies, printMedly, printGenericError } = require('@medly/starter-shared');
+const { addProjectDetails, installDependencies, printMedly, printGenericError, removeProjectFolder } = require('@medly/starter-shared');
 
 async function init() {
-    let cmdProjectName;
+    let cmdProjectName, folderName;
 
     try {
         printMedly();
@@ -42,6 +42,8 @@ async function init() {
         const commanderOptions = program.opts(),
             options = await questions({ ...commanderOptions, projectName: cmdProjectName }),
             { registry, packageManager, projectName } = options;
+
+        folderName = projectName;
 
         // Create project directory
         const projectRoot = path.resolve(projectName);
@@ -80,6 +82,7 @@ async function init() {
             console.log('\nAdd ' + chalk.green('NPM_TOKEN') + ' as secret in github repo to publish the package.');
     } catch (error) {
         printGenericError(error);
+        removeProjectFolder(folderName);
     }
 }
 

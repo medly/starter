@@ -8,10 +8,17 @@ const { execSync } = require('child_process');
 const questions = require('./questions');
 const { Option } = require('commander');
 const commander = require('commander');
-const { addProjectDetails, installDependencies, printMedly, updateHuskyCommands, printGenericError } = require('@medly/starter-shared');
+const {
+    addProjectDetails,
+    installDependencies,
+    printMedly,
+    updateHuskyCommands,
+    printGenericError,
+    removeProjectFolder
+} = require('@medly/starter-shared');
 
 async function init() {
-    let cmdProjectName;
+    let cmdProjectName, folderName;
 
     try {
         printMedly();
@@ -34,6 +41,8 @@ async function init() {
         const commanderOptions = program.opts(),
             options = await questions({ ...commanderOptions, projectName: cmdProjectName }),
             { packageManager, projectName } = options;
+
+        folderName = projectName;
 
         // Create project directory
         const projectRoot = path.resolve(projectName);
@@ -73,6 +82,7 @@ async function init() {
         ]);
     } catch (error) {
         printGenericError(error);
+        removeProjectFolder(folderName);
     }
 }
 

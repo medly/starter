@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/medly/starter/compare/@medly/starter-shared@0.5.2...@medly/starter-shared@0.5.3) (2021-07-02)
+
+
+### Bug Fixes
+
+* update error message when installing dependencies fails ([f8c9365](https://github.com/medly/starter/commit/f8c9365386b522386f2f3a891631714952ca9824))
+
+
+
+
+
 ## [0.5.2](https://github.com/medly/starter/compare/@medly/starter-shared@0.5.1...@medly/starter-shared@0.5.2) (2021-06-23)
 
 **Note:** Version bump only for package @medly/starter-shared

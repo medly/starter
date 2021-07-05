@@ -4,6 +4,7 @@ const printMedly = require('./printMedly');
 const updateHuskyCommands = require('./updateHuskyCommands');
 const removeProjectFolder = require('./removeProjectFolder');
 const printGenericError = require('./printGenericError');
+const updateTokensInGithubWorkflow = require('./updateTokensInGithubWorkflow');
 
 module.exports = {
     printMedly,
@@ -11,5 +12,6 @@ module.exports = {
     installDependencies,
     updateHuskyCommands,
     removeProjectFolder,
-    printGenericError
+    printGenericError,
+    updateTokensInGithubWorkflow
 };

@@ -9,7 +9,14 @@ const commander = require('commander');
 const { Option } = require('commander');
 const questions = require('./questions');
 const copyTemplateFiles = require('./copyTemplateFiles');
-const { addProjectDetails, installDependencies, printMedly, printGenericError, removeProjectFolder } = require('@medly/starter-shared');
+const {
+    addProjectDetails,
+    installDependencies,
+    printMedly,
+    printGenericError,
+    removeProjectFolder,
+    updateTokensInGithubWorkflow
+} = require('@medly/starter-shared');
 
 async function init() {
     let cmdProjectName, folderName;
@@ -77,9 +84,15 @@ async function init() {
             ...(registry && registry !== 'none' ? [{ command: `${packageManager} build`, description: 'To create the bundle' }] : [])
         ]);
 
-        registry &&
-            registry !== 'none' &&
-            console.log('\nAdd ' + chalk.green('NPM_TOKEN') + ' as secret in github repo to publish the package.');
+        if (registry && registry !== 'none') {
+            updateTokensInGithubWorkflow();
+            console.log(
+                chalk.bold('\nNote: ') +
+                    'Add ' +
+                    `${registry === 'github' ? 'github token as ' + chalk.green('ADMIN_TOKEN') : chalk.green('NPM_TOKEN')}` +
+                    ' as secret in github repo to publish the package.'
+            );
+        }
     } catch (error) {
         printGenericError(error);
         removeProjectFolder(folderName);

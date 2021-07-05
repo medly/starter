@@ -14,7 +14,8 @@ const {
     printMedly,
     updateHuskyCommands,
     printGenericError,
-    removeProjectFolder
+    removeProjectFolder,
+    updateTokensInGithubWorkflow
 } = require('@medly/starter-shared');
 
 async function init() {
@@ -42,7 +43,7 @@ async function init() {
 
         const commanderOptions = program.opts(),
             options = await questions({ ...commanderOptions, projectName: cmdProjectName }),
-            { packageManager, projectName } = options;
+            { packageManager, projectName, registry } = options;
 
         folderName = projectName;
 
@@ -70,6 +71,9 @@ async function init() {
         // Update husky commands with chosen package manager
         updateHuskyCommands(packageManager);
 
+        // Update token based on chosen registry
+        registry === 'github' && updateTokensInGithubWorkflow();
+
         // Final messages
         console.log(chalk.green('\n🚀 Success!') + ' Created ' + chalk.green(projectName) + ' at ' + chalk.green(projectRoot));
         console.log('\nMove to the project directory via ' + chalk.green(`cd ${projectName}`) + ' and then you can run below commands\n');
@@ -80,8 +84,22 @@ async function init() {
             { command: `${packageManager} storybook`, description: 'To run storybook server' },
             { command: `${packageManager} dist`, description: 'To create bundle' }
         ]);
-
-        console.log(chalk.bold('Note: ') + 'Add ' + chalk.green('NPM_TOKEN') + ' as secret in github repo to publish the package.');
+        if (registry === 'github') {
+            console.log(
+                chalk.bold('\nNote: ') +
+                    'Add github token as ' +
+                    chalk.green('ADMIN_TOKEN') +
+                    ' with ' +
+                    chalk.green('write:packages') +
+                    ' scope in github repo secrets.'
+            );
+        } else {
+            console.log(chalk.bold('\nNote: ') + 'Add below tokens in github repo secrets. ');
+            console.table([
+                { token: `NPM_TOKEN`, description: 'This is to publish the package on github registry.' },
+                { token: `ADMIN_TOKEN`, description: 'Add github token to publish the storybook on github pages.' }
+            ]);
+        }
     } catch (error) {
         printGenericError(error);
         removeProjectFolder(folderName);

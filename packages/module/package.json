@@ -1,6 +1,6 @@
 {
     "name": "@medly/create-module",
-    "version": "0.9.3",
+    "version": "0.9.4",
     "description": "An application for generating either ts module or simple ts app",
     "bin": "./bin/index.js",
     "files": [
@@ -19,7 +19,7 @@
     "author": "Mukul Bansal",
     "license": "ISC",
     "dependencies": {
-        "@medly/starter-shared": "0.5.3",
+        "@medly/starter-shared": "0.5.4",
         "chalk": "^4.1.1",
         "commander": "^7.2.0",
         "fs-extra": "^10.0.0",

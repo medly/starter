@@ -1505,14 +1505,6 @@
   dependencies:
     prettier "^2.3.1"
 
-"@medly/starter-shared@0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@medly/starter-shared/-/starter-shared-0.5.2.tgz#79450c5c35ccb4ab51e8839143410293b85749d9"
-  integrity sha512-Xc7o5i+YTbpGXXUkqCSkq+vSSoF5mVDkv+EoXQG3oGX5WjNvvAl2JFoA+2MBIcAcvtjCed75i9HtuFtKOmcz8g==
-  dependencies:
-    clear "^0.1.0"
-    figlet "^1.5.0"
-
 "@medly/typescript-config-react@^0.0.2":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@medly/typescript-config-react/-/typescript-config-react-0.0.2.tgz#aa97fa461ac238d9513dcecbaed69cd1155cfd1d"

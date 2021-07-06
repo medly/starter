@@ -1,4 +1,4 @@
-# Create React component
+# ⚛️ Create React component
 
 An application for generating simple react component.
 

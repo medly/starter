@@ -1,4 +1,4 @@
-# Create Web App
+# ⚛️ Create Web App
 
 An application for generating simple react app.
 

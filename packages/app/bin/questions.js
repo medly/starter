@@ -20,6 +20,17 @@ const questions = cmdOptions => [
         ],
         default: 'yarn',
         when: () => !cmdOptions.projectName || cmdOptions.interactive
+    },
+    {
+        type: 'list',
+        name: 'stateManager',
+        message: 'State Manager',
+        choices: [
+            { name: chalk.hex('#593d88')('Redux'), value: 'redux' },
+            { name: chalk.hex('#767a7d')('None'), value: 'none' }
+        ],
+        default: 'redux',
+        when: () => !cmdOptions.projectName || cmdOptions.interactive
     }
 ];
 

@@ -1,0 +1,71 @@
+{
+    "name": "template",
+    "version": "0.0.0",
+    "description": "",
+    "license": "ISC",
+    "scripts": {
+        "prepare": "husky install",
+        "pre-commit": "lint-staged",
+        "clean": "rimraf dist coverage",
+        "lint:css": "stylelint 'src/**/*.tsx'",
+        "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
+        "lint": "run-p lint:ts lint:css",
+        "lint:fix": "run-p 'lint:ts --fix' 'lint:css --fix'",
+        "test:update": "run-p test:types 'test:jest -- -u'",
+        "test:watch": "run-p 'test:types -- -w' 'test:jest -- --watch'",
+        "test:jest": "jest",
+        "test:types": "tsc",
+        "test": "run-p test:types test:jest",
+        "watch": "webpack serve --open --mode development --config node_modules/@medly/webpack-config",
+        "dist": "webpack --mode production --progress --config node_modules/@medly/webpack-config",
+        "dist:analyze": "npm run dist -- --analyze"
+    },
+    "lint-staged": {
+        "src/**/*.{ts,tsx}": [
+            "eslint 'src/**/*.tsx' --fix",
+            "stylelint 'src/**/*.tsx' --fix"
+        ]
+    },
+    "babel": {
+        "extends": "@medly/babel-config-react"
+    },
+    "eslintConfig": {
+        "parser": "@typescript-eslint/parser",
+        "extends": "@medly/react"
+    },
+    "stylelint": {
+        "extends": "@medly/stylelint-config"
+    },
+    "prettier": "@medly/prettier-config",
+    "dependencies": [
+        "@medly-components/core@latest",
+        "@medly-components/forms@latest",
+        "@medly-components/layout@latest",
+        "@medly-components/loaders@latest",
+        "@medly-components/theme@latest",
+        "axios@latest",
+        "react@latest",
+        "react-dom@latest",
+        "react-router-dom@latest",
+        "styled-components@latest"
+    ],
+    "devDependencies": [
+        "husky@6.0.0",
+        "@medly/babel-config-react@latest",
+        "@medly/eslint-config-react@latest",
+        "@medly/prettier-config@latest",
+        "@medly/stylelint-config@latest",
+        "@medly/typescript-config-react@latest",
+        "@medly/webpack-config@latest",
+        "@medly/jest-config-react@latest",
+        "@testing-library/react@latest",
+        "@types/react@latest",
+        "@types/react-dom@latest",
+        "@types/react-router-dom@latest",
+        "@types/styled-components@latest",
+        "axios-mock-adapter@latest",
+        "lint-staged@latest",
+        "npm-run-all@latest",
+        "rimraf@latest"
+    ]
+}

@@ -30,6 +30,7 @@ async function init() {
             .addOption(
                 new Option('-p, --package-manager  <package-manager>', 'package manager').choices(['npm', 'yarn', 'pnpm']).default('yarn')
             )
+            .addOption(new Option('-s, --state-manager <state-manager>', 'state manager').choices(['redux', 'none']).default('redux'))
             .option('-i, --interactive', 'show interactive questionnaire')
             .description('An application for generating either ts module or simple ts app')
             .usage(`${chalk.green('<project-name>')} [options]`)
@@ -45,9 +46,6 @@ async function init() {
         // extract the answers chosen by the developer
         const { packageManager, projectName, stateManager } = options;
 
-        console.log('State manager selected as ' + chalk.green(stateManager));
-        console.log('Package manager selected as ' + chalk.yellow(packageManager));
-
         folderName = projectName;
 
         // Create project directory
@@ -55,7 +53,7 @@ async function init() {
         fs.ensureDirSync(projectName);
         console.log('Creating the project at ' + chalk.green(projectRoot));
 
-        // Copying template files
+        // Copy template files
         copyTemplateFiles(projectName, stateManager);
 
         // Add project details

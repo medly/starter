@@ -8,9 +8,7 @@ module.exports = (projectName, stateManager) => {
     // Moves files under 'common' into projectRoot
     fs.copySync(path.join(template, 'common'), projectRoot);
 
-    if (stateManager === 'redux') {
-        fs.copySync(path.join(template, `redux`), projectRoot);
-    } else {
-        fs.copySync(path.join(template, `simple`), projectRoot);
+    if (stateManager !== 'none') {
+        fs.copySync(path.join(template, `stateManagers/${stateManager}`), projectRoot);
     }
 };

@@ -54,7 +54,7 @@ async function init() {
         console.log('Creating the project at ' + chalk.green(projectRoot));
 
         // Copy template files
-        copyTemplateFiles(projectName, stateManager);
+        copyTemplateFiles(options);
 
         // Add project details
         addProjectDetails(options);

@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 
-module.exports = (projectName, stateManager) => {
+module.exports = ({ projectName, stateManager }) => {
     const projectRoot = path.resolve(projectName),
         template = path.join(__dirname, '../template');
 

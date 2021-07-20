@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const chalk = require('chalk');
 const packageJson = require('../package.json');
-const template = path.join(__dirname, '../template');
+const copyTemplateFiles = require('./copyTemplateFiles');
 const { execSync } = require('child_process');
 const questions = require('./questions');
 const { Option } = require('commander');
@@ -30,6 +30,7 @@ async function init() {
             .addOption(
                 new Option('-p, --package-manager  <package-manager>', 'package manager').choices(['npm', 'yarn', 'pnpm']).default('yarn')
             )
+            .addOption(new Option('-s, --state-manager <state-manager>', 'state manager').choices(['redux', 'none']).default('redux'))
             .option('-i, --interactive', 'show interactive questionnaire')
             .description('An application for generating either ts module or simple ts app')
             .usage(`${chalk.green('<project-name>')} [options]`)
@@ -38,9 +39,12 @@ async function init() {
             })
             .parse(process.argv);
 
-        const commanderOptions = program.opts(),
-            options = await questions({ ...commanderOptions, projectName: cmdProjectName }),
-            { packageManager, projectName } = options;
+        // access the parsed options from command line
+        const commanderOptions = program.opts();
+
+        const options = await questions({ ...commanderOptions, projectName: cmdProjectName });
+        // extract the answers chosen by the developer
+        const { packageManager, projectName, stateManager } = options;
 
         folderName = projectName;
 
@@ -49,8 +53,8 @@ async function init() {
         fs.ensureDirSync(projectName);
         console.log('Creating the project at ' + chalk.green(projectRoot));
 
-        // Copying template files
-        fs.copySync(template, projectRoot);
+        // Copy template files
+        copyTemplateFiles(options);
 
         // Add project details
         addProjectDetails(options);

@@ -1,0 +1,21 @@
+{
+    "extends": "@medly/typescript-config-react",
+    "compilerOptions": {
+        "baseUrl": "src",
+        "paths": {
+            "@components": ["components"],
+            "@components/*": ["components/*"],
+            "@theme": ["theme"],
+            "@theme/*": ["theme/*"],
+            "@utils": ["utils"],
+            "@utils/*": ["utils/*"],
+            "@test-utils": ["utils/test-utils"],
+            "@routes": ["routes"],
+            "@routes/*": ["routes/*"],
+            "@pages": ["pages"],
+            "@pages/*": ["pages/*"]
+        }
+    },
+    "include": ["src", "types"],
+    "exclude": ["node_modules", "dist", "coverage"]
+}

@@ -1,10 +1,9 @@
-import { AddUserAction, RemoveUserAction, UserActionTypes, UserRoles } from './types';
+import { AddUserAction, RemoveUserAction, UserActionTypes } from './types';
 
-export const addUser = (userName: string, email: string, phoneNumber: string, groups: UserRoles[]): AddUserAction => ({
+export const addUser = (userName: string, email: string, phoneNumber: string): AddUserAction => ({
     userName,
     email,
     phoneNumber,
-    groups,
     type: UserActionTypes.ADD_USER
 });
 

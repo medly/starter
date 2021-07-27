@@ -27,6 +27,7 @@ const questions = cmdOptions => [
         message: 'State Manager',
         choices: [
             { name: chalk.hex('#593d88')('Redux'), value: 'redux' },
+            { name: chalk.hex('#61dafb')('React Context'), value: 'context' },
             { name: chalk.hex('#767a7d')('None'), value: 'none' }
         ],
         default: 'redux',

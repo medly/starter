@@ -15,7 +15,11 @@
             "@routes": ["routes"],
             "@routes/*": ["routes/*"],
             "@pages": ["pages"],
-            "@pages/*": ["pages/*"]
+            "@pages/*": ["pages/*"],
+            "@constants": ["constants"],
+            "@constants/*": ["constants/*"],
+            "@testData": ["../testData"],
+            "@testData/*": ["../testData/*"],
         }
     },
     "include": ["src", "types"],

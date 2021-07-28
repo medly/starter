@@ -1,12 +1,16 @@
-import { AddUserAction, RemoveUserAction, UserActionTypes } from './types';
+import { AxiosResponse } from 'axios';
+import { FetchFailureAction, FetchSuccessAction, FetchUserAction, User, UserActionTypes } from './types';
 
-export const addUser = (userName: string, email: string, phoneNumber: string): AddUserAction => ({
-    userName,
-    email,
-    phoneNumber,
-    type: UserActionTypes.ADD_USER
+export const fetchUser = (): FetchUserAction => ({
+    type: UserActionTypes.FETCH_USER_ACTION_REQUEST
 });
 
-export const removeUser = (): RemoveUserAction => ({
-    type: UserActionTypes.REMOVE_USER
+export const fetchSuccess = (user: User): FetchSuccessAction => ({
+    user,
+    type: UserActionTypes.FETCH_SUCCESS
+});
+
+export const fetchFailure = (error: AxiosResponse): FetchFailureAction => ({
+    error,
+    type: UserActionTypes.FETCH_FAILURE
 });

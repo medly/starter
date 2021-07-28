@@ -1,25 +1,31 @@
+import { AxiosResponse } from 'axios';
 import { Action } from 'redux';
 
 export enum UserActionTypes {
-    ADD_USER = '@@user/ADD_USER',
-    REMOVE_USER = '@@user/REMOVE_USER'
+    FETCH_USER_ACTION_REQUEST = '@@user/FETCH_USER_ACTION_REQUEST',
+    FETCH_SUCCESS = '@@user/FETCH_SUCCESS',
+    FETCH_FAILURE = '@@user/FETCH_FAILURE'
 }
 
-export interface UserState {
-    userName: string;
-    email: string;
-    phoneNumber: string;
+export type User = {
+    readonly firstName: string;
+    readonly lastName: string;
+    readonly email: string;
+    readonly phone: string;
 }
 
-export interface AddUserAction extends Action {
-    userName: string;
-    email: string;
-    phoneNumber: string;
-    type: typeof UserActionTypes.ADD_USER;
+export interface FetchUserAction extends Action {
+    type: typeof UserActionTypes.FETCH_USER_ACTION_REQUEST;
 }
 
-export interface RemoveUserAction extends Action {
-    type: typeof UserActionTypes.REMOVE_USER;
+export interface FetchSuccessAction extends Action {
+    user: User;
+    type: typeof UserActionTypes.FETCH_SUCCESS;
 }
 
-export type UserActions = AddUserAction | RemoveUserAction;
+export interface FetchFailureAction extends Action {
+    error: AxiosResponse;
+    type: typeof UserActionTypes.FETCH_FAILURE;
+}
+
+export type UserActions = FetchUserAction | FetchSuccessAction | FetchFailureAction;

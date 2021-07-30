@@ -1,11 +1,16 @@
 import { AppState } from '@store';
+import { fetchUser } from '@store/user';
 import { connect } from 'react-redux';
 import Header from './Header';
-import { StateProps } from './types';
+import { HeaderDispatchProps, HeaderStateProps } from './types';
 
-const mapStateToProps = ({ user }: AppState): StateProps => ({
+const mapStateToProps = ({ user }: AppState): HeaderStateProps => ({
     firstName: user?.firstName,
     lastName: user?.lastName
 });
 
-export default connect<StateProps, {}>(mapStateToProps, {})(Header);
+const mapDispatchToProps: HeaderDispatchProps = {
+    fetchUser
+};
+
+export default connect<HeaderStateProps, HeaderDispatchProps>(mapStateToProps, mapDispatchToProps)(Header);

@@ -3,20 +3,20 @@ export enum UserActionTypes {
     REMOVE_USER = 'REMOVE_USER'
 }
 
-export interface User {
-    firstName: string;
-    lastName: string;
-    email: string;
-    phoneNumber: string;
-}
+export type User = {
+    readonly firstName: string;
+    readonly lastName: string;
+    readonly email: string;
+    readonly phoneNumber: string;
+};
 
-export interface AddUserAction extends User {
+export type AddUserAction = User & {
     type: typeof UserActionTypes.ADD_USER;
-}
+};
 
-export interface RemoveUserAction {
+export type RemoveUserAction = {
     type: typeof UserActionTypes.REMOVE_USER;
-}
+};
 
 export type UserActions = AddUserAction | RemoveUserAction;
 

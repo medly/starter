@@ -1,22 +1,29 @@
-import { PageLayout } from '@components';
 import { initialState } from '@store';
+import { mockAxios, render, screen } from '@test-utils';
 import { user } from '@testData';
-import { render, screen } from '@test-utils';
 import React from 'react';
 import { Provider } from 'react-redux';
 import reduxMockStore from 'redux-mock-store';
 import Header from './Header.container';
 
 describe('Header', () => {
+    const mockResponse = {
+        firstName: 'Jon',
+        lastName: 'Doe',
+        email: 'jon@doe.com',
+        phoneNumber: '849489283131'
+    };
     const mockStore = reduxMockStore();
     const renderHeader = (store: ReturnType<typeof mockStore>) =>
         render(
             <Provider store={store}>
-                <PageLayout>
-                    <Header />
-                </PageLayout>
+                <Header />
             </Provider>
         );
+
+    beforeAll(() => {
+        mockAxios.onGet('https://run.mocky.io/v3/7937982d-ac84-4657-a1f2-e4fcf5f6d375').reply(200, mockResponse);
+    });
 
     it('should render properly', () => {
         const { container } = renderHeader(mockStore({ ...initialState, user: null }));

@@ -4,7 +4,7 @@ import { initialState, user } from '../reducer';
 
 describe('User reducer', () => {
     it('should handle FETCH_USER_ACTION action', () => {
-        expect(user(initialState, fetchUser())).toEqual(initialState);
+        expect(user(initialState, fetchUser('dummy'))).toEqual(initialState);
     });
 
     it('should handle FETCH_SUCCESS action', () => {
@@ -12,8 +12,6 @@ describe('User reducer', () => {
     });
 
     it('should handle FETCH_FAILURE action', () => {
-        // @ts-ignore
-        const error: AxiosResponse = { data: 'API Call Failed' };
-        expect(user(initialState, fetchFailure(error))).toEqual(initialState);
+        expect(user(initialState, fetchFailure({ data: 'API Call Failed' }))).toEqual(initialState);
     });
 });

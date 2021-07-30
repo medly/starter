@@ -12,9 +12,10 @@ export type User = {
     readonly lastName: string;
     readonly email: string;
     readonly phone: string;
-}
+};
 
 export interface FetchUserAction extends Action {
+    id: string;
     type: typeof UserActionTypes.FETCH_USER_ACTION_REQUEST;
 }
 
@@ -24,7 +25,7 @@ export interface FetchSuccessAction extends Action {
 }
 
 export interface FetchFailureAction extends Action {
-    error: AxiosResponse;
+    error: AxiosResponse['data'];
     type: typeof UserActionTypes.FETCH_FAILURE;
 }
 

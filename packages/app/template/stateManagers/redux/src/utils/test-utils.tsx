@@ -1,6 +1,7 @@
 import { ToastContainer } from '@medly-components/core';
 import { initialState } from '@store';
 import { rootSaga } from '@store/sagas';
+import { user } from '@testData';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { defaultTheme } from '@theme';
 import axios from 'axios';
@@ -19,7 +20,7 @@ const sagaMiddleware = reduxSaga();
 const mockStore = reduxMockStore([sagaMiddleware]),
     store = mockStore({
         ...initialState,
-        user: { ...initialState.user, groups: ['admin'] }
+        user
     });
 sagaMiddleware.run(rootSaga);
 

@@ -1,8 +1,12 @@
-import { User } from '@store/user';
+import { fetchUser } from '@store/user';
 
-export type StateProps = {
+export type HeaderStateProps = {
     firstName: string;
     lastName: string;
 };
 
-export type HeaderProps = StateProps;
+export type HeaderDispatchProps = {
+    fetchUser: typeof fetchUser;
+};
+
+export type HeaderProps = HeaderStateProps & HeaderDispatchProps;

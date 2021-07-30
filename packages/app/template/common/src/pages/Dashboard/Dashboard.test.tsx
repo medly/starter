@@ -1,17 +1,15 @@
-import { renderWithRouter } from '@test-utils';
+import { render } from '@test-utils';
 import React from 'react';
 import Dashboard from './';
 
 describe('Dashboard', () => {
-    const renderDashboard = (isLoading: boolean) => renderWithRouter(<Dashboard isLoading={isLoading} />);
-
     it('should render properly', () => {
-        const { container } = renderDashboard(false);
+        const { container } = render(<Dashboard />);
         expect(container).toMatchSnapshot();
     });
 
     it('should show loading if isLoading Prop is true', () => {
-        const { container } = renderDashboard(true);
+        const { container } = render(<Dashboard isLoading />);
         expect(container).toMatchSnapshot();
     });
 });

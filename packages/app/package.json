@@ -1,6 +1,6 @@
 {
     "name": "@medly/create-app",
-    "version": "0.5.6",
+    "version": "0.6.0",
     "description": "An application for generating react app",
     "bin": "./bin/index.js",
     "files": [

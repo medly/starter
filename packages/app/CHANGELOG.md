@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/medly/starter/compare/@medly/create-app@0.5.6...@medly/create-app@0.6.0) (2021-08-01)
+
+
+### Features
+
+* **create-app:** adds React context as an option in state managers ([1121981](https://github.com/medly/starter/commit/11219818b1d4eaff68b5b769e89643e78940859d))
+* **create-app:** adds template files which use React context API ([688cc85](https://github.com/medly/starter/commit/688cc8582197d4e9262a605afdce7fbe68a45ed0))
+* **create-app:** updates the redux template with proper usages for the flow ([2950cff](https://github.com/medly/starter/commit/2950cffb970a567d9261c5c4196402cfd9c29862))
+
+
+
+
+
 ## [0.5.6](https://github.com/medly/starter/compare/@medly/create-app@0.5.5...@medly/create-app@0.5.6) (2021-07-20)
 
 **Note:** Version bump only for package @medly/create-app

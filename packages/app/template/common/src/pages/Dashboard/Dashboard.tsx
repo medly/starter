@@ -10,3 +10,4 @@ export const Dashboard: React.FC<Props> = ({ isLoading }) => (
         </Text>
     </PageContent>
 );
+Dashboard.displayName = 'Dashboard';

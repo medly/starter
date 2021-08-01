@@ -30,7 +30,9 @@ async function init() {
             .addOption(
                 new Option('-p, --package-manager  <package-manager>', 'package manager').choices(['npm', 'yarn', 'pnpm']).default('yarn')
             )
-            .addOption(new Option('-s, --state-manager <state-manager>', 'state manager').choices(['redux', 'none']).default('redux'))
+            .addOption(
+                new Option('-s, --state-manager <state-manager>', 'state manager').choices(['redux', 'context', 'none']).default('redux')
+            )
             .option('-i, --interactive', 'show interactive questionnaire')
             .description('An application for generating either ts module or simple ts app')
             .usage(`${chalk.green('<project-name>')} [options]`)

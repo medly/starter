@@ -1,24 +1,12 @@
 import { Reducer } from 'redux';
-import { UserActions, UserActionTypes, UserState } from './types';
+import { User, UserActions, UserActionTypes } from './types';
 
-export const initialState: UserState = {
-    userName: '',
-    email: '',
-    phoneNumber: '',
-    groups: []
-};
+export const initialState: User = null;
 
-export const user: Reducer<UserState, UserActions> = (state = initialState, { type, ...payload }) => {
-    switch (type) {
-        case UserActionTypes.ADD_USER:
-            return {
-                ...state,
-                ...payload
-            };
-        case UserActionTypes.REMOVE_USER:
-            return {
-                ...initialState
-            };
+export const user: Reducer<User, UserActions> = (state = initialState, action) => {
+    switch (action.type) {
+        case UserActionTypes.FETCH_SUCCESS:
+            return { ...state, ...action.user };
         default:
             return state;
     }

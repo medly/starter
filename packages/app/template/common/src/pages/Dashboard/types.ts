@@ -1,5 +1,5 @@
 export type StateProps = {
-    isLoading: boolean;
+    isLoading?: boolean;
 };
 
 export type Props = StateProps;

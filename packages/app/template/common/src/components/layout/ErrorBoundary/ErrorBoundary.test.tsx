@@ -7,9 +7,7 @@ describe('ErrorBoundary component', () => {
     beforeEach(() => {
         jest.spyOn(console, 'error');
         // @ts-ignore
-        console.error.mockImplementation(() => {
-            return null;
-        });
+        console.error.mockImplementation(() => null);
     });
 
     afterEach(() => {

@@ -1,6 +1,6 @@
 name: Build
 
-on: [push, label, release, pull_request]
+on: [push, pull_request]
 
 jobs:
     build:
@@ -12,7 +12,7 @@ jobs:
             - name: Setup Node.js
               uses: actions/setup-node@v1
               with:
-                  node-version: '12.x'
+                  node-version: '14.x'
 
             - name: Install dependencies
               run: yarn
@@ -28,4 +28,3 @@ jobs:
 
             - name: Create bundle
               run: yarn dist
-

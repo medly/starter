@@ -4,16 +4,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import reduxSaga from 'redux-saga';
 import { rootSaga } from './sagas';
 import { initialState as userInitialState, user } from './user';
-import { initialState as loadingInitialState, loading } from './loading';
 
-export const initialState = {
-        user: userInitialState,
-        loading: loadingInitialState
-    },
+export const initialState = { user: userInitialState },
     sagaMiddleware = reduxSaga(),
     rootReducer = combineReducers({
-        user,
-        loading
+        user
     }),
     store = createStore(rootReducer, {}, composeWithDevTools(applyMiddleware(sagaMiddleware)));
 

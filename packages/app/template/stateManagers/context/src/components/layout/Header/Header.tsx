@@ -27,5 +27,3 @@ export const Header: React.FC & WithStyle = () => {
 
 Header.displayName = 'Header';
 Header.Style = Styled.Header;
-
-export default Header;

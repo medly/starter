@@ -1,7 +1,7 @@
 import { AppState } from '@store';
 import { fetchUser } from '@store/user';
 import { connect } from 'react-redux';
-import Header from './Header';
+import { Header } from './Header';
 import { HeaderDispatchProps, HeaderStateProps } from './types';
 
 const mapStateToProps = ({ user }: AppState): HeaderStateProps => ({

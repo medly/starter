@@ -8,18 +8,18 @@ import Header from './Header.container';
 
 describe('Header', () => {
     const mockResponse = {
-        firstName: 'Jon',
-        lastName: 'Doe',
-        email: 'jon@doe.com',
-        phoneNumber: '849489283131'
-    };
-    const mockStore = reduxMockStore();
-    const renderHeader = (store: ReturnType<typeof mockStore>) =>
-        render(
-            <Provider store={store}>
-                <Header />
-            </Provider>
-        );
+            firstName: 'Jon',
+            lastName: 'Doe',
+            email: 'jon@doe.com',
+            phoneNumber: '849489283131'
+        },
+        mockStore = reduxMockStore(),
+        renderHeader = (store: ReturnType<typeof mockStore>) =>
+            render(
+                <Provider store={store}>
+                    <Header />
+                </Provider>
+            );
 
     beforeAll(() => {
         mockAxios.onGet('https://run.mocky.io/v3/7937982d-ac84-4657-a1f2-e4fcf5f6d375').reply(200, mockResponse);

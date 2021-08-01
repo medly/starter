@@ -47,9 +47,7 @@ const WithRouter: React.FunctionComponent = props => (
 
 const WithStoreAndRouter: React.FunctionComponent = props => (
     <Provider store={store}>
-        <MemoryRouter>
-            <WithThemeProvider>{props.children}</WithThemeProvider>
-        </MemoryRouter>
+        <WithRouter>{props.children}</WithRouter>
     </Provider>
 );
 

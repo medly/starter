@@ -27,5 +27,3 @@ export const Header: React.FC<HeaderProps> & WithStyle = ({ fetchUser, firstName
 
 Header.displayName = 'Header';
 Header.Style = Styled.Header;
-
-export default Header;

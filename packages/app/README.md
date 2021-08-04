@@ -14,13 +14,13 @@ Then follow the prompts or you can run command `yarn create @medly/app <project-
 
 ### Options
 
-| Flags                                     | Description                    | Choices               | Default |
-| ----------------------------------------- | ------------------------------ | --------------------- | ------- |
-| `-V, --version`                           | output the version number      |                       |         |
-| `-p, --package-manager <package-manager>` | package manager                | `npm`, `yarn`, `pnpm` | `yarn`  |
-| `-s, --state-manager <state-manager>`     | state manager                  | `redux`, `none`       | `redux` |
-| `-i, --interactive`                       | show interactive questionnaire |                       |         |
-| `-h, --help`                              | display help for command       |                       |         |
+| Flags                                     | Description                    | Choices                   | Default |
+| ----------------------------------------- | ------------------------------ | ------------------------- | ------- |
+| `-V, --version`                           | output the version number      |                           |         |
+| `-p, --package-manager <package-manager>` | package manager                | `npm`, `yarn`, `pnpm`     | `yarn`  |
+| `-s, --state-manager <state-manager>`     | state manager                  | `redux`, `context`,`none` | `redux` |
+| `-i, --interactive`                       | show interactive questionnaire |                           |         |
+| `-h, --help`                              | display help for command       |                           |         |
 
 ## Features
 

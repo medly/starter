@@ -1,5 +1,3 @@
-export type StateProps = {
+export type DashboardProps = {
     isLoading?: boolean;
 };
-
-export type Props = StateProps;

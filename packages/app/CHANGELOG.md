@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.2](https://github.com/medly/starter/compare/@medly/create-app@0.6.1...@medly/create-app@0.6.2) (2021-08-05)
+
+
+### Bug Fixes
+
+* prop name issue in dashboard component ([#38](https://github.com/medly/starter/issues/38)) ([5e2e9b9](https://github.com/medly/starter/commit/5e2e9b9218efa5930918b888c8a7b3db7b8f00a0))
+
+
+
+
+
 ## [0.6.1](https://github.com/medly/starter/compare/@medly/create-app@0.6.0...@medly/create-app@0.6.1) (2021-08-04)
 
 

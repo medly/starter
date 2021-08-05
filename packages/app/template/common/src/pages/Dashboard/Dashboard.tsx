@@ -1,9 +1,9 @@
 import { PageContent } from '@components/layout';
 import { Text } from '@medly-components/core';
 import React from 'react';
-import { Props } from './types';
+import { DashboardProps } from './types';
 
-export const Dashboard: React.FC<Props> = ({ isLoading }) => (
+export const Dashboard: React.FC<DashboardProps> = ({ isLoading }) => (
     <PageContent isLoading={isLoading}>
         <Text textWeight="Strong" textVariant="body1">
             Dashboard Content

@@ -29,7 +29,9 @@ async function init() {
             .version(packageJson.version)
             .arguments('[project-name]')
             .option('-o, --owner <owner>', 'owner of the package')
-            .addOption(new Option('-r, --registry <registry>', 'registry to publish the module').choices(['npm', 'github']))
+            .addOption(
+                new Option('-r, --registry <registry>', 'registry to publish the module').choices(['none', 'npm', 'github']).default('none')
+            )
             .addOption(
                 new Option('-p, --package-manager  <package-manager>', 'package manager').choices(['npm', 'yarn', 'pnpm']).default('yarn')
             )

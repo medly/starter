@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.7](https://github.com/medly/starter/compare/@medly/create-module@0.9.6...@medly/create-module@0.9.7) (2021-08-13)
+
+
+### Bug Fixes
+
+* registry none issue ([cbece8a](https://github.com/medly/starter/commit/cbece8a2f2c61106165d6979f376c7a149710da1))
+
+
+
+
+
 ## [0.9.6](https://github.com/medly/starter/compare/@medly/create-module@0.9.5...@medly/create-module@0.9.6) (2021-08-12)
 
 **Note:** Version bump only for package @medly/create-module

@@ -40,7 +40,7 @@ async function init() {
             .description('An application for generating either ts module or simple ts app')
             .usage(`${chalk.green('<project-name>')} [options]`)
             .action((name, options) => {
-                if (options.registry && !options.owner) {
+                if (options.registry && options.registry !== 'none' && !options.owner) {
                     console.error(chalk.red('Error: ') + '-o, --owner <owner> required when you have added registry option');
                     process.exit(1);
                 }

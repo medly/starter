@@ -21,10 +21,7 @@
         "dist:analyze": "npm run dist -- --analyze"
     },
     "lint-staged": {
-        "src/**/*.{ts,tsx}": [
-            "eslint 'src/**/*.tsx' --fix",
-            "stylelint 'src/**/*.tsx' --fix"
-        ]
+        "src/**/*.{ts,tsx}": ["eslint 'src/**/*.tsx' --fix", "stylelint 'src/**/*.tsx' --fix"]
     },
     "babel": {
         "extends": "@medly/babel-config-react"
@@ -58,6 +55,7 @@
         "@medly/typescript-config-react@latest",
         "@medly/webpack-config@latest",
         "@medly/jest-config-react@latest",
+        "@testing-library/dom@latest",
         "@testing-library/react@latest",
         "@types/react@latest",
         "@types/react-dom@latest",

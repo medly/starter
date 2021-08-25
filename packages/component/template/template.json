@@ -83,6 +83,7 @@
         "@storybook/addon-links@latest",
         "@storybook/react@latest",
         "@storybook/storybook-deployer@latest",
+        "@testing-library/dom@latest",
         "@testing-library/react@latest",
         "@types/react@latest",
         "@types/react-dom@latest",

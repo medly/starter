@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.3](https://github.com/medly/starter/compare/@medly/create-app@0.6.2...@medly/create-app@0.6.3) (2021-08-25)
+
+
+### Bug Fixes
+
+* fireEvent import issue by importing latest @testing-library/dom ([#40](https://github.com/medly/starter/issues/40)) ([b78b46c](https://github.com/medly/starter/commit/b78b46c86c3674f3f8dbdacaece44bb699fb4419))
+
+
+
+
+
 ## [0.6.2](https://github.com/medly/starter/compare/@medly/create-app@0.6.1...@medly/create-app@0.6.2) (2021-08-05)
 
 

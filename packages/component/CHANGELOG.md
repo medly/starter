@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.4](https://github.com/medly/starter/compare/@medly/create-component@0.6.3...@medly/create-component@0.6.4) (2021-08-25)
+
+
+### Bug Fixes
+
+* fireEvent import issue by importing latest @testing-library/dom ([#40](https://github.com/medly/starter/issues/40)) ([b78b46c](https://github.com/medly/starter/commit/b78b46c86c3674f3f8dbdacaece44bb699fb4419))
+
+
+
+
+
 ## [0.6.3](https://github.com/medly/starter/compare/@medly/create-component@0.6.2...@medly/create-component@0.6.3) (2021-08-03)
 
 **Note:** Version bump only for package @medly/create-component

@@ -1,11 +1,9 @@
-import { cleanup, renderWithRouter } from '@test-utils';
+import { renderWithRouter } from '@test-utils';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { Routes } from './Routes';
 
 describe('Routes', () => {
-    afterEach(cleanup);
-
     it('should render dashboard page properly', async () => {
         const { findByText } = renderWithRouter(
             <MemoryRouter initialEntries={[{ pathname: `/` }]}>

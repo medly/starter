@@ -85,6 +85,7 @@
         "@storybook/storybook-deployer@latest",
         "@testing-library/dom@latest",
         "@testing-library/react@latest",
+        "@testing-library/user-event@latest",
         "@types/react@latest",
         "@types/react-dom@latest",
         "@types/styled-components@latest",

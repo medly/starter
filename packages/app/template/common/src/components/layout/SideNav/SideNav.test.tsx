@@ -1,4 +1,5 @@
-import { cleanup, fireEvent, renderWithRouter } from '@test-utils';
+import { renderWithRouter } from '@test-utils';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { SideNav } from './SideNav';
 
@@ -12,11 +13,9 @@ jest.mock('react-router-dom', () => ({
 }));
 
 describe('SideNav', () => {
-    afterEach(cleanup);
-
     it('should call history.push on click on dashboard', async () => {
         const { getByText } = renderWithRouter(<SideNav />);
-        fireEvent.click(getByText('Dashboard'));
+        userEvent.click(getByText('Dashboard'));
         expect(mockHistoryPush).toHaveBeenCalledWith('/');
     });
 });

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/medly/starter/compare/@medly/create-app@0.7.0...@medly/create-app@0.7.1) (2021-08-30)
+
+
+### Bug Fixes
+
+* regenerator error in medly app ([fe9afe6](https://github.com/medly/starter/commit/fe9afe6280fe6e9e76b2b011baeda78c615c5c5a))
+
+
+
+
+
 # [0.7.0](https://github.com/medly/starter/compare/@medly/create-app@0.6.4...@medly/create-app@0.7.0) (2021-08-30)
 
 

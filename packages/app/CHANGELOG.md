@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/medly/starter/compare/@medly/create-app@0.6.4...@medly/create-app@0.7.0) (2021-08-30)
+
+
+### Features
+
+* add @medly-components/utils package in medly app ([67e80f8](https://github.com/medly/starter/commit/67e80f81a7e9b9f0473dc0f7b5c67e25eb2a4e29))
+
+
+
+
+
 ## [0.6.4](https://github.com/medly/starter/compare/@medly/create-app@0.6.3...@medly/create-app@0.6.4) (2021-08-26)
 
 **Note:** Version bump only for package @medly/create-app

@@ -40,6 +40,7 @@
         "@medly-components/layout@latest",
         "@medly-components/loaders@latest",
         "@medly-components/theme@latest",
+        "@medly-components/utils@latest",
         "axios@latest",
         "react@latest",
         "react-dom@latest",

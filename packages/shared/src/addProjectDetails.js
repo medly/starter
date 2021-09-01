@@ -12,12 +12,6 @@ module.exports = ({ projectName, registry, org, access }) => {
     package.author = org || '';
     if (registry && registry !== `none`) {
         package.name = `@${org}/${projectName}`;
-        package.repository = {
-            type: 'git',
-            url: `git://github.com/${org}/${projectName}.git`
-        };
-        package.homepage = `https://github.com/${org}/${projectName}#readme`;
-        package.bugs = `https://github.com/${org}/${projectName}/issues`;
         package.publishConfig.registry = `${registry === 'github' ? 'https://npm.pkg.github.com' : 'https://registry.npmjs.org'}`;
         package.publishConfig.access = access;
     } else {

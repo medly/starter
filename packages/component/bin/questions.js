@@ -25,6 +25,17 @@ const questions = cmdOptions => [
     },
     {
         type: 'list',
+        name: 'access',
+        message: 'Access level of the component',
+        choices: [
+            { name: chalk.hex('#00FF00')('Public'), value: 'public' },
+            { name: chalk.hex('#FFFF00')('Restricted'), value: 'restricted' }
+        ],
+        default: cmdOptions.access,
+        when: () => !cmdOptions.access || cmdOptions.interactive
+    },
+    {
+        type: 'list',
         name: 'packageManager',
         message: 'Package Manager',
         choices: [
@@ -33,17 +44,6 @@ const questions = cmdOptions => [
             { name: chalk.hex('#F9AD00')('pnpm'), value: 'pnpm' }
         ],
         default: 'yarn',
-        when: () => !cmdOptions.projectName || cmdOptions.interactive
-    },
-    {
-        type: 'list',
-        name: 'access',
-        message: 'Access level of the component',
-        choices: [
-            { name: chalk.hex('#00FF00')('Public'), value: 'public' },
-            { name: chalk.hex('#FFFF00')('Restricted'), value: 'restricted' }
-        ],
-        default: cmdOptions.access,
         when: () => !cmdOptions.projectName || cmdOptions.interactive
     }
 ];

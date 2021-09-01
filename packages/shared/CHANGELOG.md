@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/medly/starter/compare/@medly/starter-shared@0.5.4...@medly/starter-shared@0.6.0) (2021-09-01)
+
+
+### Features
+
+* add access level and rename owner to org name ([#44](https://github.com/medly/starter/issues/44)) ([3b6289b](https://github.com/medly/starter/commit/3b6289be18942c1197c6f16fc803ef3ae06b0441))
+
+
+
+
+
 ## [0.5.4](https://github.com/medly/starter/compare/@medly/starter-shared@0.5.3...@medly/starter-shared@0.5.4) (2021-07-05)
 
 **Note:** Version bump only for package @medly/starter-shared

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/medly/starter/compare/@medly/create-module@0.9.7...@medly/create-module@0.10.0) (2021-09-01)
+
+
+### Features
+
+* add access level and rename owner to org name ([#44](https://github.com/medly/starter/issues/44)) ([3b6289b](https://github.com/medly/starter/commit/3b6289be18942c1197c6f16fc803ef3ae06b0441))
+
+
+
+
+
 ## [0.9.7](https://github.com/medly/starter/compare/@medly/create-module@0.9.6...@medly/create-module@0.9.7) (2021-08-13)
 
 

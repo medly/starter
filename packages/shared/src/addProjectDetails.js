@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 
-module.exports = ({ projectName, registry, owner }) => {
+module.exports = ({ projectName, registry, org, access }) => {
     const projectRoot = path.resolve(projectName),
         package = fs.readJSONSync(path.join(projectRoot, 'template.json'));
 
@@ -9,16 +9,17 @@ module.exports = ({ projectName, registry, owner }) => {
     fs.removeSync(path.join(projectRoot, 'template.json'));
 
     // Update basic details based on the options chosen
-    package.author = owner || '';
+    package.author = org || '';
     if (registry && registry !== `none`) {
-        package.name = `@${owner}/${projectName}`;
+        package.name = `@${org}/${projectName}`;
         package.repository = {
             type: 'git',
-            url: `git://github.com/${owner}/${projectName}.git`
+            url: `git://github.com/${org}/${projectName}.git`
         };
-        package.homepage = `https://github.com/${owner}/${projectName}#readme`;
-        package.bugs = `https://github.com/${owner}/${projectName}/issues`;
-        package.publishConfig.registry = `${registry === 'github' ? 'https://npm.pkg.github.com' : 'https://registry.npmjs.org'}/${owner}`;
+        package.homepage = `https://github.com/${org}/${projectName}#readme`;
+        package.bugs = `https://github.com/${org}/${projectName}/issues`;
+        package.publishConfig.registry = `${registry === 'github' ? 'https://npm.pkg.github.com' : 'https://registry.npmjs.org'}`;
+        package.publishConfig.access = access;
     } else {
         package.name = projectName;
     }

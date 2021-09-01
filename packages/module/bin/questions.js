@@ -19,9 +19,9 @@ const questions = cmdOptions => [
     },
     {
         type: 'input',
-        name: 'owner',
-        message: 'Owner of the package',
-        when: answers => !cmdOptions.owner && answers.registry && answers.registry !== 'none'
+        name: 'org',
+        message: 'Name of the organization',
+        when: answers => !cmdOptions.org && answers.registry && answers.registry !== 'none'
     },
     {
         type: 'list',
@@ -44,6 +44,17 @@ const questions = cmdOptions => [
             { name: chalk.hex('#F9AD00')('pnpm'), value: 'pnpm' }
         ],
         default: cmdOptions.packageManager,
+        when: () => !cmdOptions.projectName || cmdOptions.interactive
+    },
+    {
+        type: 'list',
+        name: 'access',
+        message: 'Access level of the module',
+        choices: [
+            { name: chalk.hex('#00FF00')('Public'), value: 'public' },
+            { name: chalk.hex('#FFFF00')('Restricted'), value: 'restricted' }
+        ],
+        default: cmdOptions.access,
         when: () => !cmdOptions.projectName || cmdOptions.interactive
     }
 ];

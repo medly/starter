@@ -14,12 +14,15 @@ Then follow the prompts or you can run command `yarn create @medly/component <pr
 
 ### Options
 
-| Flags                                     | Description                    | Choices               | Default |
-| ----------------------------------------- | ------------------------------ | --------------------- | ------- |
-| `-V, --version`                           | output the version number      |                       |         |
-| `-p, --package-manager <package-manager>` | package manager                | `npm`, `yarn`, `pnpm` | `yarn`  |
-| `-i, --interactive`                       | show interactive questionnaire |                       |         |
-| `-h, --help`                              | display help for command       |                       |         |
+| Flags                                     | Description                    | Choices                | Default  |
+| ----------------------------------------- | ------------------------------ | ---------------------- | -------- |
+| `-V, --version`                           | output the version number      |                        |          |
+| `-o, --org <org>`                         | name of the organization       |                        |          |
+| `-r, --registry <registry>`               | registry to publish the module | `npm`, `github`        | `npm`    |
+| `-p, --package-manager <package-manager>` | package manager                | `npm`, `yarn`, `pnpm`  | `yarn`   |
+| `-a, --access <access>`                   | access level of the component  | `public`, `restricted` | `public` |
+| `-i, --interactive`                       | show interactive questionnaire |                        |          |
+| `-h, --help`                              | display help for command       |                        |          |
 
 ## Features
 

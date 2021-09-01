@@ -28,20 +28,23 @@ async function init() {
         const program = new commander.Command(packageJson.name)
             .version(packageJson.version)
             .arguments('[project-name]')
-            .option('-o, --owner <owner>', 'owner of the package')
+            .option('-o, --org <org>', 'name of the organization')
             .addOption(
                 new Option('-r, --registry <registry>', 'registry to publish the module').choices(['none', 'npm', 'github']).default('none')
             )
             .addOption(
                 new Option('-p, --package-manager  <package-manager>', 'package manager').choices(['npm', 'yarn', 'pnpm']).default('yarn')
             )
+            .addOption(
+                new Option('-a, --access  <access>', 'Access level of the module').choices(['public', 'restricted']).default('public')
+            )
             .addOption(new Option('-l, --language  <language>', 'language').choices(['typescript', 'javascript']).default('typescript'))
             .option('-i, --interactive', 'show interactive questionnaire')
             .description('An application for generating either ts module or simple ts app')
             .usage(`${chalk.green('<project-name>')} [options]`)
             .action((name, options) => {
-                if (options.registry && options.registry !== 'none' && !options.owner) {
-                    console.error(chalk.red('Error: ') + '-o, --owner <owner> required when you have added registry option');
+                if (options.registry && options.registry !== 'none' && !options.org) {
+                    console.error(chalk.red('Error: ') + '-o, --org <org> required when you have added registry option');
                     process.exit(1);
                 }
                 cmdProjectName = name;
@@ -87,7 +90,7 @@ async function init() {
         ]);
 
         if (registry && registry !== 'none') {
-            updateTokensInGithubWorkflow();
+            registry === 'github' && updateTokensInGithubWorkflow();
             console.log(
                 chalk.bold('\nNote: ') +
                     'Add ' +

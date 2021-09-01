@@ -11,7 +11,7 @@
     "license": "ISC",
     "type": "module",
     "publishConfig": {
-        "registry": "https://registry.npmjs.org/medly"
+        "registry": "https://registry.npmjs.org"
     },
     "scripts": {
         "prepare": "husky install",

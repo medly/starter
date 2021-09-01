@@ -17,9 +17,10 @@ Then follow the prompts or you can run command `yarn create @medly/module <proje
 | Flags                                     | Description                    | Choices                    | Default      |
 | ----------------------------------------- | ------------------------------ | -------------------------- | ------------ |
 | `-V, --version`                           | output the version number      |                            |              |
-| `-o, --owner <owner>`                     | owner of the package           |                            |              |
-| `-r, --registry <registry>`               | registry to publish the module | `npm`, `github`            |              |
+| `-o, --org <org>`                         | name of the organization       |                            |              |
+| `-r, --registry <registry>`               | registry to publish the module | `npm`, `github`, `none`    | `none`       |
 | `-p, --package-manager <package-manager>` | package manager                | `npm`, `yarn`, `pnpm`      | `yarn`       |
+| `-a, --access <access>`                   | access level of the module     | `public`, `restricted`     | `public`     |
 | `-l, --language <language>`               | language                       | `typescript`, `javascript` | `typescript` |
 | `-i, --interactive`                       | show interactive questionnaire |                            |              |
 | `-h, --help`                              | display help for command       |                            |              |
@@ -39,6 +40,5 @@ It sets up the following:
 7. `github workflow` to automatically `publish the package on PR merge`.
 8. `semantic-release` to bump the version and update the `CHANGELOG`.
 9. `typescript` also, if you choose `typescript` as language option.
-
 
 ![create-module](https://user-images.githubusercontent.com/3636885/123096440-bab59f00-d44c-11eb-9df0-412145d21abc.gif)

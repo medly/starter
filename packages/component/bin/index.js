@@ -28,10 +28,13 @@ async function init() {
         const program = new commander.Command(packageJson.name)
             .version(packageJson.version)
             .arguments('[project-name]')
-            .option('-o, --owner <owner>', 'owner of the package')
+            .option('-o, --org <org>', 'name of the organization')
             .addOption(new Option('-r, --registry <registry>', 'registry to publish the module').choices(['npm', 'github']).default('npm'))
             .addOption(
                 new Option('-p, --package-manager  <package-manager>', 'package manager').choices(['npm', 'yarn', 'pnpm']).default('yarn')
+            )
+            .addOption(
+                new Option('-a, --access  <access>', 'Access level of the component').choices(['public', 'restricted']).default('public')
             )
             .option('-i, --interactive', 'show interactive questionnaire')
             .description('An application for creating scaffolding for react component')

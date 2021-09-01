@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/medly/starter/compare/@medly/create-component@0.7.0...@medly/create-component@0.7.1) (2021-09-01)
+
+
+### Bug Fixes
+
+* repositry name issue while releasing the package ([#45](https://github.com/medly/starter/issues/45)) ([e85f970](https://github.com/medly/starter/commit/e85f970032791fcd599ec7af58cb6930a85b777b))
+
+
+
+
+
 # [0.7.0](https://github.com/medly/starter/compare/@medly/create-component@0.6.5...@medly/create-component@0.7.0) (2021-09-01)
 
 

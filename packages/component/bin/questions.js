@@ -32,7 +32,7 @@ const questions = cmdOptions => [
             { name: chalk.hex('#FFFF00')('Restricted'), value: 'restricted' }
         ],
         default: cmdOptions.access,
-        when: () => !cmdOptions.access || cmdOptions.interactive
+        when: () => !cmdOptions.projectName || cmdOptions.interactive
     },
     {
         type: 'list',

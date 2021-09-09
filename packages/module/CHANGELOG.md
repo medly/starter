@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.2](https://github.com/medly/starter/compare/@medly/create-module@0.10.1...@medly/create-module@0.10.2) (2021-09-09)
+
+
+### Bug Fixes
+
+* private module publish issue ([#46](https://github.com/medly/starter/issues/46)) ([6e1ed10](https://github.com/medly/starter/commit/6e1ed10ed5001dda6ad7904fc6bb7ec8c481aa18))
+
+
+
+
+
 ## [0.10.1](https://github.com/medly/starter/compare/@medly/create-module@0.10.0...@medly/create-module@0.10.1) (2021-09-01)
 
 

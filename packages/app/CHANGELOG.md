@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.4](https://github.com/medly/starter/compare/@medly/create-app@0.7.3...@medly/create-app@0.7.4) (2021-09-15)
+
+
+### Bug Fixes
+
+* updates the \`grid-template-rows\` style of PageLayout ([#47](https://github.com/medly/starter/issues/47)) ([66ce3a7](https://github.com/medly/starter/commit/66ce3a7eccd14613994b789de2bae52aea6f3248))
+
+
+
+
+
 ## [0.7.3](https://github.com/medly/starter/compare/@medly/create-app@0.7.2...@medly/create-app@0.7.3) (2021-09-01)
 
 **Note:** Version bump only for package @medly/create-app

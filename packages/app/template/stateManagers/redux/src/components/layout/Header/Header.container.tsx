@@ -13,4 +13,4 @@ const mapDispatchToProps: HeaderDispatchProps = {
     fetchUser
 };
 
-export default connect<HeaderStateProps, HeaderDispatchProps>(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

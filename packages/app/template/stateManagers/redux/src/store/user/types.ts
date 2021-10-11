@@ -1,4 +1,3 @@
-import { AxiosResponse } from 'axios';
 import { Action } from 'redux';
 
 export enum UserActionTypes {
@@ -25,7 +24,7 @@ export interface FetchSuccessAction extends Action {
 }
 
 export interface FetchFailureAction extends Action {
-    error: AxiosResponse['data'];
+    error: unknown;
     type: typeof UserActionTypes.FETCH_FAILURE;
 }
 

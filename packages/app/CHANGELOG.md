@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/medly/starter/compare/@medly/create-app@0.7.4...@medly/create-app@0.8.0) (2021-10-11)
+
+
+### Bug Fixes
+
+* fix null type in redux starter template ([23c9b97](https://github.com/medly/starter/commit/23c9b972a7b5afd91692b260b0be3da690e88348))
+* strict null check in redux files ([ddbf8ff](https://github.com/medly/starter/commit/ddbf8ffddda7f799a4813b49204049122d2f48d8))
+
+
+### Features
+
+* change default app name for react app ([a5667b3](https://github.com/medly/starter/commit/a5667b3ecac2b3d82388d19c74ce08ea97144b11))
+
+
+
+
+
 ## [0.7.4](https://github.com/medly/starter/compare/@medly/create-app@0.7.3...@medly/create-app@0.7.4) (2021-09-15)
 
 

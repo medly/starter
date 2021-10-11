@@ -6,7 +6,7 @@ const questions = cmdOptions => [
         type: 'input',
         name: 'projectName',
         message: 'Project Name',
-        default: 'medly-app',
+        default: 'test-app',
         when: () => !cmdOptions.projectName
     },
     {

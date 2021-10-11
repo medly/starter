@@ -1,5 +1,4 @@
-import { AxiosResponse } from 'axios';
-import { FetchSuccessAction, FetchUserAction, User, UserActionTypes, FetchFailureAction } from './types';
+import { FetchFailureAction, FetchSuccessAction, FetchUserAction, User, UserActionTypes } from './types';
 
 export const fetchUser = (id: string): FetchUserAction => ({
     id,
@@ -11,7 +10,7 @@ export const fetchSuccess = (user: User): FetchSuccessAction => ({
     type: UserActionTypes.FETCH_SUCCESS
 });
 
-export const fetchFailure = (error: AxiosResponse['data']): FetchFailureAction => ({
+export const fetchFailure = (error: unknown): FetchFailureAction => ({
     error,
     type: UserActionTypes.FETCH_FAILURE
 });

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/medly/starter/compare/@medly/create-app@0.8.0...@medly/create-app@0.8.1) (2021-11-17)
+
+**Note:** Version bump only for package @medly/create-app
+
+
+
+
+
 # [0.8.0](https://github.com/medly/starter/compare/@medly/create-app@0.7.4...@medly/create-app@0.8.0) (2021-10-11)
 
 

@@ -1,5 +1,4 @@
 import { mockAxios, renderWithUserProvider, screen } from '@test-utils';
-import React from 'react';
 import { Header } from './Header';
 
 const mockResponse = {

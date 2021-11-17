@@ -3,11 +3,10 @@ import { CssBaseline, ToastContainer } from '@medly-components/core';
 import Routes from '@routes';
 import { defaultTheme } from '@theme';
 import { UserProvider } from 'context';
-import React from 'react';
+import type { FC } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-
-const App: React.FC = () => (
+const App: FC = () => (
     <ThemeProvider theme={defaultTheme}>
         <>
             <CssBaseline />

@@ -1,10 +1,11 @@
 import { useUser } from '@context';
 import { Avatar, Text } from '@medly-components/core';
 import { WithStyle } from '@medly-components/utils';
-import React, { useMemo } from 'react';
+import type { FC } from 'react';
+import { useMemo } from 'react';
 import * as Styled from './Header.styled';
 
-export const Header: React.FC & WithStyle = () => {
+const Component: FC = () => {
     const {
         state: { firstName, lastName }
     } = useUser();
@@ -24,6 +25,5 @@ export const Header: React.FC & WithStyle = () => {
         </Styled.Header>
     );
 };
-
-Header.displayName = 'Header';
-Header.Style = Styled.Header;
+Component.displayName = 'Header';
+export const Header: FC & WithStyle = Object.assign(Component, { Style: Styled.Header });

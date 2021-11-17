@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import type { FC } from 'react';
 import { ButtonStyled } from './Button.styled';
 import { ButtonProps } from './types';
 

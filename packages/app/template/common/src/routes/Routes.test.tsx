@@ -1,5 +1,4 @@
 import { renderWithRouter } from '@test-utils';
-import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { Routes } from './Routes';
 

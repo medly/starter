@@ -1,8 +1,8 @@
 import { addToast } from '@medly-components/core';
 import axios from 'axios';
-import React, { createContext, useContext, useEffect, useReducer } from 'react';
+import type { FC } from 'react';
+import { createContext, useContext, useEffect, useReducer } from 'react';
 import { Dispatch, User, UserActions, UserActionTypes } from './types';
-
 const FETCH_USER_URL = 'https://run.mocky.io/v3/7937982d-ac84-4657-a1f2-e4fcf5f6d375';
 
 export const initialState: User = {
@@ -31,7 +31,7 @@ export const userReducer = (state: User, { type, ...payload }: UserActions) => {
     }
 };
 
-const UserProvider: React.FC = ({ children }) => {
+const UserProvider: FC = ({ children }) => {
     const [state, dispatch] = useReducer(userReducer, initialState);
     const value = { state, dispatch };
 

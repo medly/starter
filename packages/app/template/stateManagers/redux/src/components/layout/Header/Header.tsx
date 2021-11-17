@@ -1,10 +1,11 @@
 import { Avatar, Text } from '@medly-components/core';
 import { WithStyle } from '@medly-components/utils';
-import React, { useEffect, useMemo } from 'react';
+import type { FC } from 'react';
+import { useEffect, useMemo } from 'react';
 import * as Styled from './Header.styled';
 import { HeaderProps } from './types';
 
-export const Header: React.FC<HeaderProps> & WithStyle = ({ fetchUser, firstName, lastName }) => {
+const Component: FC<HeaderProps> = ({ fetchUser, firstName, lastName }) => {
     const nameInitials = useMemo(() => (firstName && lastName ? `${firstName[0]}${lastName[0]}`.toUpperCase() : ''), [firstName, lastName]);
 
     useEffect(() => {
@@ -25,5 +26,5 @@ export const Header: React.FC<HeaderProps> & WithStyle = ({ fetchUser, firstName
     );
 };
 
-Header.displayName = 'Header';
-Header.Style = Styled.Header;
+Component.displayName = 'Header';
+export const Header: FC<HeaderProps> & WithStyle = Object.assign(Component, { Style: Styled.Header });

@@ -1,7 +1,7 @@
-import React, { HTMLProps } from 'react';
+import { FC, HTMLProps, memo } from 'react';
 import { PageLayoutStyled } from './PageLayout.styled';
 
-export const PageLayout: React.FC<HTMLProps<HTMLDivElement>> = React.memo(({ children }) => {
+export const PageLayout: FC<HTMLProps<HTMLDivElement>> = memo(({ children }) => {
     return <PageLayoutStyled>{children}</PageLayoutStyled>;
 });
 

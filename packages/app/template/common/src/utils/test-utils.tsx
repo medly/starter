@@ -3,13 +3,12 @@ import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { defaultTheme } from '@theme';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import React from 'react';
+import type { FC } from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-
 export const mockAxios = new MockAdapter(axios);
 
-const WithThemeProvider: React.FunctionComponent = props => (
+const WithThemeProvider: FC = props => (
     <ThemeProvider theme={defaultTheme}>
         <>
             <ToastContainer position="top-end" />

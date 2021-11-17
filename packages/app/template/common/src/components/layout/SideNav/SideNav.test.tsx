@@ -1,6 +1,5 @@
 import { renderWithRouter } from '@test-utils';
 import userEvent from '@testing-library/user-event';
-import React from 'react';
 import { SideNav } from './SideNav';
 
 const mockHistoryPush = jest.fn();

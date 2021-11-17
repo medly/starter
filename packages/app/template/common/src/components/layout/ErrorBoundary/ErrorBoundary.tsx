@@ -1,7 +1,7 @@
-import React from 'react';
+import { PureComponent } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 
-class ErrorBoundary extends React.PureComponent<RouteComponentProps> {
+class ErrorBoundary extends PureComponent<RouteComponentProps> {
     public componentDidCatch() {
         this.props.history.push('/');
     }

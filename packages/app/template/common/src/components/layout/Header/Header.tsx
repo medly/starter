@@ -1,9 +1,9 @@
 import { Avatar, Text } from '@medly-components/core';
 import { WithStyle } from '@medly-components/utils';
-import React from 'react';
+import type { FC } from 'react';
 import * as Styled from './Header.styled';
 
-export const Header: React.FC & WithStyle = () => {
+const Component: FC = () => {
     return (
         <Styled.Header>
             <Styled.LeftSide>
@@ -18,5 +18,5 @@ export const Header: React.FC & WithStyle = () => {
     );
 };
 
-Header.displayName = 'Header';
-Header.Style = Styled.Header;
+Component.displayName = 'Header';
+export const Header: FC & WithStyle = Object.assign(Component, { Style: Styled.Header });

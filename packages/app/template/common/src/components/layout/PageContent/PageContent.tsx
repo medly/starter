@@ -1,10 +1,10 @@
 import { CircleLoader } from '@medly-components/loaders';
 import { WithStyle } from '@medly-components/utils';
-import React from 'react';
+import type { FC } from 'react';
 import * as Styled from './PageContent.styled';
 import { Props } from './types';
 
-export const PageContent: React.FC<Props> & WithStyle = props => {
+const Component: FC<Props> = props => {
     return (
         <Styled.PageContent {...props}>
             {props.isLoading && (
@@ -17,5 +17,7 @@ export const PageContent: React.FC<Props> & WithStyle = props => {
     );
 };
 
-PageContent.displayName = 'PageContent';
-PageContent.Style = Styled.PageContent;
+Component.displayName = 'PageContent';
+export const PageContent: FC<Props> & WithStyle = Object.assign(Component, {
+    Style: Styled.PageContent
+});

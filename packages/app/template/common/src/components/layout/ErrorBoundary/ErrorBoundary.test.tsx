@@ -1,5 +1,4 @@
 import { renderWithRouter } from '@test-utils';
-import React from 'react';
 import PageContent from '../PageContent';
 import ErrorBoundary from './ErrorBoundary';
 

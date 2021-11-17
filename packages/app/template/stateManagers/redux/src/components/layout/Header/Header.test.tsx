@@ -1,7 +1,6 @@
 import { initialState } from '@store';
 import { mockAxios, render, screen } from '@test-utils';
 import { user } from '@testData';
-import React from 'react';
 import { Provider } from 'react-redux';
 import reduxMockStore from 'redux-mock-store';
 import Header from './Header.container';

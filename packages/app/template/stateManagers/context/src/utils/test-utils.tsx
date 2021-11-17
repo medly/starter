@@ -4,13 +4,12 @@ import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { defaultTheme } from '@theme';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import React from 'react';
+import type { FC, ReactElement } from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-
 export const mockAxios = new MockAdapter(axios);
 
-const WithThemeProvider: React.FunctionComponent = props => (
+const WithThemeProvider: FC = props => (
     <ThemeProvider theme={defaultTheme}>
         <>
             <ToastContainer position="top-end" />
@@ -19,13 +18,13 @@ const WithThemeProvider: React.FunctionComponent = props => (
     </ThemeProvider>
 );
 
-const WithRouter: React.FunctionComponent = props => (
+const WithRouter: FC = props => (
     <MemoryRouter>
         <WithThemeProvider>{props.children}</WithThemeProvider>
     </MemoryRouter>
 );
 
-const WithUserProvider: React.FC = props => {
+const WithUserProvider: FC = props => {
     return (
         <WithRouter>
             <UserProvider {...props} />
@@ -33,13 +32,12 @@ const WithUserProvider: React.FC = props => {
     );
 };
 
-const customRender = (ui: React.ReactElement, options?: RenderOptions): RenderResult =>
-    render(ui, { wrapper: WithThemeProvider, ...options });
+const customRender = (ui: ReactElement, options?: RenderOptions): RenderResult => render(ui, { wrapper: WithThemeProvider, ...options });
 
-export const renderWithUserProvider = (ui: React.ReactElement, options?: RenderOptions): RenderResult =>
+export const renderWithUserProvider = (ui: ReactElement, options?: RenderOptions): RenderResult =>
     render(ui, { wrapper: WithUserProvider, ...options });
 
-export const renderWithRouter = (ui: React.ReactElement, options?: RenderOptions): RenderResult =>
+export const renderWithRouter = (ui: ReactElement, options?: RenderOptions): RenderResult =>
     render(ui, { wrapper: WithRouter, ...options });
 
 // re-export everything

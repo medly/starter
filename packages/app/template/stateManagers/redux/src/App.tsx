@@ -7,6 +7,7 @@ import type { FC } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+
 const App: FC = () => (
     <Provider store={store}>
         <ThemeProvider theme={defaultTheme}>

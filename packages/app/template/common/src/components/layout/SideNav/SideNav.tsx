@@ -4,6 +4,7 @@ import { MedlySidenavHeader, SideNav as MedlySideNav } from '@medly-components/l
 import type { FC } from 'react';
 import { memo, useCallback } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
+
 const Component: FC = memo(() => {
     const { pathname } = useLocation(),
         history = useHistory(),

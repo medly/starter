@@ -4,6 +4,7 @@ import { WithStyle } from '@medly-components/utils';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 import * as Styled from './Header.styled';
+
 const Component: FC = () => {
     const {
         state: { firstName, lastName }

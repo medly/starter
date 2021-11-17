@@ -2,6 +2,7 @@ import { Avatar, Text } from '@medly-components/core';
 import { WithStyle } from '@medly-components/utils';
 import type { FC } from 'react';
 import * as Styled from './Header.styled';
+
 const Component: FC = () => {
     return (
         <Styled.Header>

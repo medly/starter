@@ -3,6 +3,7 @@ import { WithStyle } from '@medly-components/utils';
 import type { FC } from 'react';
 import * as Styled from './PageContent.styled';
 import { Props } from './types';
+
 const Component: FC<Props> = props => {
     return (
         <Styled.PageContent {...props}>

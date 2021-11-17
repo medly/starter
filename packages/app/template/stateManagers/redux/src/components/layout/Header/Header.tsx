@@ -4,6 +4,7 @@ import type { FC } from 'react';
 import { useEffect, useMemo } from 'react';
 import * as Styled from './Header.styled';
 import { HeaderProps } from './types';
+
 const Component: FC<HeaderProps> = ({ fetchUser, firstName, lastName }) => {
     const nameInitials = useMemo(() => (firstName && lastName ? `${firstName[0]}${lastName[0]}`.toUpperCase() : ''), [firstName, lastName]);
 

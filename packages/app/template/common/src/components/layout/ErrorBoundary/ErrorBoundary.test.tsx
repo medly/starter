@@ -29,6 +29,6 @@ describe('ErrorBoundary component', () => {
                 </PageContent>
             </ErrorBoundary>
         );
-        expect(container).toHaveTextContent('Success');
+        expect(container).toHaveTextContent('Something went wrong');
     });
 });

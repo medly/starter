@@ -45,7 +45,8 @@
         "react@latest",
         "react-dom@latest",
         "react-redux@latest",
-        "react-router-dom@5.3.0",
+        "react-router-dom@latest",
+        "react-error-boundary",
         "redux@latest",
         "redux-saga@latest",
         "styled-components@latest"

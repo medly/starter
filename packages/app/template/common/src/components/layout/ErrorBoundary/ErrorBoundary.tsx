@@ -1,14 +1,10 @@
-import { PureComponent } from 'react';
-import { RouteComponentProps, withRouter } from 'react-router-dom';
+import type { FC } from 'react';
+import { ErrorBoundary as ReactErrorBoundary, FallbackProps } from 'react-error-boundary';
+const ErrorFallback: FC<FallbackProps> = ({ error }) => {
+    return <p>{error.message}</p>;
+};
+const ErrorBoundary: FC = ({ children }) => {
+    return <ReactErrorBoundary FallbackComponent={ErrorFallback}>{children}</ReactErrorBoundary>;
+};
 
-class ErrorBoundary extends PureComponent<RouteComponentProps> {
-    public componentDidCatch() {
-        this.props.history.push('/');
-    }
-
-    public render() {
-        return <>{this.props.children}</>;
-    }
-}
-
-export default withRouter(ErrorBoundary);
+export default ErrorBoundary;

@@ -45,7 +45,6 @@
         "react@latest",
         "react-dom@latest",
         "react-router-dom@latest",
-        "react-error-boundary",
         "styled-components@latest"
     ],
     "devDependencies": [

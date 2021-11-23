@@ -1,10 +1,19 @@
-import type { FC } from 'react';
-import { ErrorBoundary as ReactErrorBoundary, FallbackProps } from 'react-error-boundary';
-const ErrorFallback: FC<FallbackProps> = ({ error }) => {
-    return <p>{error.message}</p>;
-};
-const ErrorBoundary: FC = ({ children }) => {
-    return <ReactErrorBoundary FallbackComponent={ErrorFallback}>{children}</ReactErrorBoundary>;
-};
+import { Component, FC, memo } from 'react';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
+class ErrorBoundaryClass extends Component<{ navigate: NavigateFunction }> {
+    public componentDidCatch() {
+        this.props.navigate('/error');
+    }
+
+    public render() {
+        return <>{this.props.children}</>;
+    }
+}
+const ErrorBoundary: FC = memo(({ children }) => {
+    const navigate = useNavigate();
+    return <ErrorBoundaryClass navigate={navigate}>{children}</ErrorBoundaryClass>;
+});
+
+ErrorBoundary.displayName = 'ErrorBoundary';
 export default ErrorBoundary;

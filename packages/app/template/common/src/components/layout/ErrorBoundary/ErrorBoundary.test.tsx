@@ -1,18 +1,14 @@
-import { renderWithRouter } from '@test-utils';
+import { render, screen, waitFor } from '@test-utils';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import PageContent from '../PageContent';
 import ErrorBoundary from './ErrorBoundary';
+const NoMatch = () => <pre>Something went wrong</pre>;
 
 describe('ErrorBoundary component', () => {
     beforeEach(() => {
         jest.spyOn(console, 'error');
-        // @ts-ignore
-        console.error.mockImplementation(() => null);
     });
 
-    afterEach(() => {
-        // @ts-ignore
-        console.error.mockRestore();
-    });
     it('should render properly', () => {
         const dummy = jest
             .fn()
@@ -22,13 +18,19 @@ describe('ErrorBoundary component', () => {
             .mockReturnValue(() => 'Success');
 
         const ErrorComponent = () => <div>{dummy()()}</div>;
-        const { container } = renderWithRouter(
-            <ErrorBoundary>
-                <PageContent>
-                    <ErrorComponent />
-                </PageContent>
-            </ErrorBoundary>
+        render(
+            <MemoryRouter initialEntries={['/']}>
+                <ErrorBoundary>
+                    <PageContent>
+                        <ErrorComponent />
+                    </PageContent>
+                </ErrorBoundary>
+                <Routes>
+                    <Route path={'/error'} element={<NoMatch />} />
+                </Routes>
+            </MemoryRouter>
         );
-        expect(container).toHaveTextContent('Something went wrong');
+
+        waitFor(() => expect(screen).toHaveTextContent('Something went wrong'));
     });
 });

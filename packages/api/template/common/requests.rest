@@ -1,0 +1,22 @@
+###
+GET http://localhost:3000/  
+
+###
+GET  http://localhost:3000/api/book
+
+###
+GET  http://localhost:3000/api/book/1
+
+###
+POST http://localhost:3000/api/book 
+Content-Type: application/json
+
+{
+  "id":"6",
+  "title": "The Hobbit",
+  "author": "J.R.R. Tolkien"
+}
+
+###
+DELETE   http://localhost:3000/api/book/6
+

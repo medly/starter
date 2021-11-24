@@ -1,0 +1,49 @@
+{
+    "name": "template",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/server.js",
+    "scripts": {
+        "lint": "eslint '{src,__test__}/**/*.ts'",
+        "lint:fix": "yarn lint --fix",
+        "test": "jest",
+        "postinstall": "yarn dist",
+        "predist": "rimraf dist",
+        "dist": "tsc",
+        "build": "yarn predist && yarn dist",
+        "prestart": "yarn build",
+        "start": "node --loader ts-node/esm ./src/server.ts",
+        "dev": "tsc -w & nodemon .",
+        "watch": "nodemon .",
+        "clean": "rimraf yarn.lock && rimraf node_modules && yarn install"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "eslintConfig": {
+        "extends": "@medly"
+    },
+    "prettier": "@medly/prettier-config",
+    "dependencies": ["cors@latest", "dotenv@latest", "express@latest", "helmet@latest", "morgan@latest"],
+    "devDependencies": [
+        "husky@6.0.0",
+        "@medly/eslint-config@latest",
+        "@medly/prettier-config@latest",
+        "@medly/typescript-config@latest",
+        "@types/cors@latest",
+        "@types/dotenv@latest",
+        "@types/express@latest",
+        "@types/morgan@latest",
+        "@types/node@latest",
+        "@types/supertest@latest",
+        "jest@latest",
+        "jest-cli@latest",
+        "nodemon@latest",
+        "npm-run-all@latest",
+        "rimraf@latest",
+        "supertest@latest",
+        "ts-jest@latest",
+        "ts-node@latest",
+        "tsconfig-paths@latest"
+    ]
+}

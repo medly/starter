@@ -1,0 +1,37 @@
+{
+    "name": "test-backend",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "main": "src/server.js",
+    "scripts": {
+        "lint": "eslint '{src,__test__}/**/*.js'",
+        "lint:fix": "yarn lint --fix",
+        "test": "jest",
+        "start": "node src/server.js",
+        "dev": "nodemon .",
+        "watch": "nodemon .",
+        "clean": "rimraf yarn.lock && rimraf node_modules && yarn install"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "eslintConfig": {
+        "extends": "@medly"
+    },
+    "prettier": "@medly/prettier-config",
+    "dependencies": ["cors@latest", "dotenv@latest", "express@latest", "helmet@latest", "morgan@latest"],
+    "devDependencies": [
+        "husky@6.0.0",
+        "@medly/eslint-config@latest",
+        "@medly/prettier-config@latest",
+        "@medly/typescript-config@latest",
+        "husky@latest",
+        "jest@latest",
+        "jest-cli@latest",
+        "nodemon@latest",
+        "npm-run-all@latest",
+        "rimraf@latest",
+        "supertest@latest"
+    ]
+}

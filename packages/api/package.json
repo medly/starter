@@ -1,0 +1,27 @@
+{
+    "name": "@medly/create-api",
+    "version": "0.8.1",
+    "description": "An application for generating api",
+    "bin": "./bin/index.js",
+    "files": [
+        "bin",
+        "template"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/medly"
+    },
+    "keywords": [
+        "Medly",
+        "app"
+    ],
+    "author": "Mukul Bansal",
+    "license": "ISC",
+    "dependencies": {
+        "@medly/starter-shared": "0.6.1",
+        "chalk": "^4.1.1",
+        "commander": "^7.2.0",
+        "fs-extra": "^10.0.0",
+        "inquirer": "^8.1.0"
+    }
+}

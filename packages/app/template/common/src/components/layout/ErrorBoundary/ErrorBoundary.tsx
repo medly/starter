@@ -16,4 +16,5 @@ const ErrorBoundary: FC = memo(({ children }) => {
 });
 
 ErrorBoundary.displayName = 'ErrorBoundary';
+
 export default ErrorBoundary;

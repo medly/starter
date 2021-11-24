@@ -10,7 +10,7 @@ jest.mock('react-router-dom', () => ({
 }));
 
 describe('SideNav', () => {
-    it('should call history.push on click on dashboard', async () => {
+    it('should call navigate on click on dashboard', async () => {
         const { getByText } = renderWithRouter(<SideNav />);
         userEvent.click(getByText('Dashboard'));
         waitFor(() => {

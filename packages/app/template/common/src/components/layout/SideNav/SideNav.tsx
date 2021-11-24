@@ -21,6 +21,7 @@ const Component: FC = memo(() => {
         </MedlySideNav>
     );
 });
+
 Component.displayName = 'AppSideNav';
 
 export const SideNav = Object.assign(Component, { Style: MedlySideNav.Style });

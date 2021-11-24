@@ -2,7 +2,6 @@ import { render, screen, waitFor } from '@test-utils';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import PageContent from '../PageContent';
 import ErrorBoundary from './ErrorBoundary';
-const NoMatch = () => <pre>Something went wrong</pre>;
 
 describe('ErrorBoundary component', () => {
     beforeEach(() => {
@@ -17,20 +16,24 @@ describe('ErrorBoundary component', () => {
             })
             .mockReturnValue(() => 'Success');
 
-        const ErrorComponent = () => <div>{dummy()()}</div>;
-        render(
+        const ErrorComponent = () => (
+            <ErrorBoundary>
+                <PageContent>
+                    <div>{dummy()()}</div>
+                </PageContent>
+            </ErrorBoundary>
+        );
+        const NoMatch = () => <pre>Something went wrong</pre>;
+
+        const { container, debug } = render(
             <MemoryRouter initialEntries={['/']}>
-                <ErrorBoundary>
-                    <PageContent>
-                        <ErrorComponent />
-                    </PageContent>
-                </ErrorBoundary>
                 <Routes>
+                    <Route path={'/'} element={<ErrorComponent />} />
                     <Route path={'/error'} element={<NoMatch />} />
                 </Routes>
             </MemoryRouter>
         );
-
+        debug(container);
         waitFor(() => expect(screen).toHaveTextContent('Something went wrong'));
     });
 });

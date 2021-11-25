@@ -78,7 +78,7 @@ async function init() {
         console.table([
             { command: `${packageManager} lint`, description: 'To run eslint' },
             { command: `${packageManager} test`, description: 'To run jest tests' },
-            { command: `${packageManager} test:jest <test_name>`, description: 'To run specific test' },
+            { command: `${packageManager} test <test_name>`, description: 'To run specific test' },
             { command: `${packageManager} watch`, description: 'To run nodemon server' },
             { command: `${packageManager} start`, description: 'To run node server' }
         ]);

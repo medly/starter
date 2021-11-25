@@ -1,6 +1,6 @@
 # Create Api
 
-An application for generating api.
+An application for generating backend application using ExpressJS.
 
 ## Getting started
 
@@ -18,7 +18,7 @@ Then follow the prompts or you can run command `yarn create @medly/api <project-
 | ----------------------------------------- | ------------------------------ | -------------------------- | ------- |
 | `-V, --version`                           | output the version number      |                            |         |
 | `-p, --package-manager <package-manager>` | package manager                | `npm`, `yarn`, `pnpm`      | `yarn`  |
-| `-p, --language <language>`               | package manager                | `javascript`, `typescript` |
+| `-p, --language <language>`               | language                       | `javascript`, `typescript` |
 | `-i, --interactive`                       | show interactive questionnaire |                            |         |
 | `-h, --help`                              | display help for command       |                            |         |
 

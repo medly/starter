@@ -7,8 +7,5 @@ module.exports = ({ projectName, language }) => {
 
     // Moves files under 'common' into projectRoot
     fs.copySync(path.join(template, 'common'), projectRoot);
-
     fs.copySync(path.join(template, language), projectRoot);
-
-    fs.copySync(path.join(template, `./simple/${language}`), projectRoot);
 };

@@ -31,7 +31,7 @@ async function init() {
                 new Option('-p, --package-manager  <package-manager>', 'package manager').choices(['npm', 'yarn', 'pnpm']).default('yarn')
             )
             .option('-i, --interactive', 'show interactive questionnaire')
-            .description('An application for generating either ts module or simple ts app')
+            .description('An application for generating backend application using ExpressJS')
             .usage(`${chalk.green('<project-name>')} [options]`)
             .action(name => {
                 cmdProjectName = name;

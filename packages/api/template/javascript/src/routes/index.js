@@ -16,6 +16,7 @@ router.get('/', (_, res) => {
         res.status(500).json({ message: 'Something went wrong' });
     }
 });
+
 router.get('/:id', (req, res) => {
     try {
         const book = Books.find(b => b.id === req.params.id);
@@ -28,6 +29,7 @@ router.get('/:id', (req, res) => {
         res.status(500).json({ message: 'Something went wrong' });
     }
 });
+
 router.post('/', (req, res) => {
     try {
         const { id, author, title } = req.body;

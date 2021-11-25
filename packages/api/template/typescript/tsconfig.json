@@ -1,17 +1,9 @@
 {
     "extends": "@medly/typescript-config",
     "compilerOptions": {
+        "noEmit": false,
         "baseUrl": "src",
-        "paths": {
-            "@routes": ["routes"],
-            "@routes/*": ["routes/*"],
-            "@utils": ["utils"],
-            "@utils/*": ["utils/*"],
-            "@middleware": ["middleware"],
-            "@middleware/*": ["middleware/*"],
-            "@constants": ["constants"],
-            "@constants/*": ["constants/*"]
-        }
+        "outDir": "dist"
     },
     "include": ["src"],
     "exclude": ["node_modules", "dist"]

@@ -23,6 +23,4 @@ app.get('/', (_, res) => {
     res.send('Hello World!');
 });
 
-/* Generic error handler middleware */
-
 export default app;

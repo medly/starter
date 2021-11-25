@@ -1,7 +1,7 @@
 {
     "name": "@medly/create-api",
-    "version": "0.8.1",
-    "description": "An application for generating api",
+    "version": "0.0.1",
+    "description": "An application for generating backend application using ExpressJS",
     "bin": "./bin/index.js",
     "files": [
         "bin",
@@ -13,9 +13,11 @@
     },
     "keywords": [
         "Medly",
-        "app"
+        "api",
+        "NodeJS",
+        "ExpressJS"
     ],
-    "author": "Mukul Bansal",
+    "author": "Manish Ranjan",
     "license": "ISC",
     "dependencies": {
         "@medly/starter-shared": "0.6.1",

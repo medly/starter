@@ -1,6 +1,7 @@
 import { Router } from 'express';
 
 const router: Router = Router();
+
 let Books: { id: string; title: string; author: string }[] = [
     { id: '1', title: 'Book 1', author: 'Author 1' },
     { id: '2', title: 'Book 2', author: 'Author 2' },
@@ -15,6 +16,7 @@ router.get('/', (_, res) => {
         res.status(500).json({ message: 'Something went wrong' });
     }
 });
+
 router.get('/:id', (req, res) => {
     try {
         const book = Books.find(b => b.id === req.params.id);
@@ -27,6 +29,7 @@ router.get('/:id', (req, res) => {
         res.status(500).json({ message: 'Something went wrong' });
     }
 });
+
 router.post('/', (req, res) => {
     try {
         const { id, author, title } = req.body;

@@ -1,0 +1,51 @@
+{
+    "name": "typescript-api",
+    "description": "",
+    "main": "dist/server.js",
+    "scripts": {
+        "postinstall": "yarn dist",
+        "lint": "eslint '{src,__test__}/**/*.ts'",
+        "lint:fix": "yarn lint --fix",
+        "test": "jest",
+        "predist": "rimraf dist",
+        "dist": "tsc",
+        "prestart": "yarn dist",
+        "start": "node .",
+        "watch": "nodemon .",
+        "clean": "rimraf yarn.lock && rimraf node_modules && yarn install"
+    },
+    "keywords": [],
+    "author": "",
+    "eslintConfig": {
+        "extends": "@medly"
+    },
+    "prettier": "@medly/prettier-config",
+    "jest": {
+        "collectCoverage": true,
+        "rootDir": "./",
+        "roots": ["<rootDir>/src/"],
+        "transform": {
+            "^.+\\.ts$": "ts-jest"
+        }
+    },
+    "dependencies": ["cors@latest", "dotenv@latest", "express@latest", "helmet@latest", "morgan@latest"],
+    "devDependencies": [
+        "@medly/eslint-config@latest",
+        "@medly/prettier-config@latest",
+        "@medly/typescript-config@latest",
+        "@types/cors@latest",
+        "@types/dotenv@latest",
+        "@types/express@latest",
+        "@types/morgan@latest",
+        "@types/node@latest",
+        "@types/supertest@latest",
+        "husky@latest",
+        "jest@latest",
+        "jest-cli@latest",
+        "nodemon@latest",
+        "rimraf@latest",
+        "supertest@latest",
+        "ts-jest@latest",
+        "ts-node@latest"
+    ]
+}

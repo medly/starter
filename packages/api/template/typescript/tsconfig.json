@@ -1,0 +1,10 @@
+{
+    "extends": "@medly/typescript-config",
+    "compilerOptions": {
+        "noEmit": false,
+        "baseUrl": "src",
+        "outDir": "dist"
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
+}

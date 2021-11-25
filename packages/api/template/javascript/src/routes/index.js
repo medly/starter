@@ -47,7 +47,7 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res) => {
     try {
         const book = Books.filter(b => b.id === req.params.id);
-        if (book) {
+        if (book.length) {
             Books = Books.filter(b => b.id !== req.params.id);
             res.status(200).json(book);
         } else {

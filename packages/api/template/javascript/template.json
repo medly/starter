@@ -13,6 +13,9 @@
     },
     "keywords": [],
     "author": "",
+    "babel": {
+        "extends": "@medly/babel-config"
+    },
     "eslintConfig": {
         "extends": "@medly"
     },

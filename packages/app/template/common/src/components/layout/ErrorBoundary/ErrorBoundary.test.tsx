@@ -25,7 +25,7 @@ describe('ErrorBoundary component', () => {
         );
         const NoMatch = () => <pre>Something went wrong</pre>;
 
-        const { container, debug } = render(
+        render(
             <MemoryRouter initialEntries={['/']}>
                 <Routes>
                     <Route path={'/'} element={<ErrorComponent />} />
@@ -33,7 +33,6 @@ describe('ErrorBoundary component', () => {
                 </Routes>
             </MemoryRouter>
         );
-        debug(container);
         waitFor(() => expect(screen).toHaveTextContent('Something went wrong'));
     });
 });

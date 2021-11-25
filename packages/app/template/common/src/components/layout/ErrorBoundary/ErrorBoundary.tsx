@@ -1,14 +1,20 @@
-import { PureComponent } from 'react';
-import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { Component, FC, memo } from 'react';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
-class ErrorBoundary extends PureComponent<RouteComponentProps> {
+class ErrorBoundaryClass extends Component<{ navigate: NavigateFunction }> {
     public componentDidCatch() {
-        this.props.history.push('/');
+        this.props.navigate('/error');
     }
 
     public render() {
         return <>{this.props.children}</>;
     }
 }
+const ErrorBoundary: FC = memo(({ children }) => {
+    const navigate = useNavigate();
+    return <ErrorBoundaryClass navigate={navigate}>{children}</ErrorBoundaryClass>;
+});
 
-export default withRouter(ErrorBoundary);
+ErrorBoundary.displayName = 'ErrorBoundary';
+
+export default ErrorBoundary;

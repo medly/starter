@@ -3,12 +3,12 @@ import { DashboardIcon } from '@medly-components/icons';
 import { MedlySidenavHeader, SideNav as MedlySideNav } from '@medly-components/layout';
 import type { FC } from 'react';
 import { memo, useCallback } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Component: FC = memo(() => {
     const { pathname } = useLocation(),
-        history = useHistory(),
-        handlePathChange = useCallback((page: string) => history.push(page), [history]);
+        navigate = useNavigate(),
+        handlePathChange = useCallback((page: string) => navigate(page), [navigate]);
     return (
         <MedlySideNav onChange={handlePathChange} active={pathname} defaultActive="/">
             <MedlySidenavHeader />
@@ -21,6 +21,7 @@ const Component: FC = memo(() => {
         </MedlySideNav>
     );
 });
+
 Component.displayName = 'AppSideNav';
 
 export const SideNav = Object.assign(Component, { Style: MedlySideNav.Style });

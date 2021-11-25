@@ -18,11 +18,13 @@ describe('api', () => {
         expect(status).toBe(200);
         expect(body).toEqual(Books);
     });
+
     it('should return info of book on GET http://localhost:3000/api/book/1', async () => {
         const { status, body } = await request(app).get('/api/book/1');
         expect(status).toBe(200);
         expect(body).toEqual(Books[0]);
     });
+
     it('should return 404 on GET http://localhost:3000/api/book/5', async () => {
         const { status } = await request(app).get('/api/book/5');
         expect(status).toBe(404);
@@ -36,6 +38,7 @@ describe('api', () => {
         });
         expect(status).toBe(201);
     });
+
     it('should return error on POST http://localhost:3000/api/book', async () => {
         const { status } = await request(app).post('/api/book').send({
             id: '5',

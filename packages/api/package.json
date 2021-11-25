@@ -1,6 +1,6 @@
 {
     "name": "@medly/create-api",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "An application for generating backend application using ExpressJS",
     "bin": "./bin/index.js",
     "files": [

@@ -1,14 +1,14 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: 'bug: issue title'
-labels: bug
-assignees: ''
+Name: Bug report
+Description: Create a report to help us improve
+Title: 'bug: issue title'
+Label: bug
+Assignee: ''
 ---
 
-### Describe the bug
+### Describe the Bug
 
-A clear and concise description of what the bug is.
+Write a clear and concise description of the bug.
 
 ### To Reproduce
 
@@ -19,16 +19,16 @@ Steps to reproduce the behavior:
 3. Scroll down to '....'
 4. See error
 
-### Expected behavior
+### Expected Behavior
 
-A clear and concise description of what you expected to happen.
+Write a crisp description of what was expected to occur.
 
 ### Screenshots
 
-If applicable, add screenshots to help explain your problem.
+If applicable, add screenshots to explain the problem.
 
-### Package versions
+### Package Versions
 
-### Additional context
+### Additional Context
 
-Add any other context about the problem here.
+If needed, add additional information about the problem.

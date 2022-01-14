@@ -1,8 +1,11 @@
-# Create Module
+# 🧩 Create Module
 
-An application for generating either module or simple app. You can also choose between `typescript` & `javascript` language.
+A platform to generate simple modules or applications. Choose between `typescript` or `javascript` language.
 
-## Getting started
+## Getting Started
+- **NPM** is used to publish, discover, install, and develop node programs.
+- **Yarn** provides speed, consistency, stability, and security.
+- **PNPM** offers significantly better disk space usage and speed.
 
 | Package Manager | Command                     |
 | --------------- | --------------------------- |
@@ -10,10 +13,9 @@ An application for generating either module or simple app. You can also choose b
 | Yarn            | `yarn create @medly/module` |
 | PNPM            | `pnpx @medly/create-module` |
 
-Then follow the prompts or you can run command `yarn create @medly/module <project-name> [options]` with below options.
+Follow the prompts or run command `yarn create @medly/module <project-name> [options]` with the below options.
 
-### Options
-
+**Options Available**
 | Flags                                     | Description                    | Choices                    | Default      |
 | ----------------------------------------- | ------------------------------ | -------------------------- | ------------ |
 | `-V, --version`                           | output the version number      |                            |              |
@@ -28,9 +30,6 @@ Then follow the prompts or you can run command `yarn create @medly/module <proje
 > **Note:** Add `NPM_TOKEN` as secret in github repo to publish the package.
 
 ## Features
-
-It sets up the following:
-
 1. `babel` to `transpile` the code.
 2. `jest` to write `unit tests`.
 3. `rollup` to `bundle` the code.

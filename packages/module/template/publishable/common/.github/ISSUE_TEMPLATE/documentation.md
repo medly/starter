@@ -6,6 +6,6 @@ labels: documentation
 assignees: ''
 ---
 
-## Component Name
+### Component Name
 
-## Please share the context
+### Please share the context

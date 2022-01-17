@@ -27,7 +27,7 @@ Follow the prompts or run command `yarn create @medly/module <project-name> [opt
 | `-i, --interactive`                       | show interactive questionnaire |                            |              |
 | `-h, --help`                              | display help for command       |                            |              |
 
-> **Note:** Add `NPM_TOKEN` as secret in github repo to publish the package.
+> **Note:** Add `NPM_TOKEN` as secret in the github repo to publish the package.
 
 ## Features
 1. `babel` to `transpile` the code.

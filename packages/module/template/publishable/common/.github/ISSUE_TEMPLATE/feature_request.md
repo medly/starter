@@ -8,7 +8,7 @@ assignees: ''
 
 ### Description
 
-A clear and concise description of the feature request
+A clear and concise description of the feature request.
 
 ### Solution you'd like
 

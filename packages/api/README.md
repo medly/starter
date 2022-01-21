@@ -1,11 +1,8 @@
 # 🖥️ Create API
 
-A platform to generate backend applications using ExpressJS framework. Use `typescript` language.
+A kit to generate backend applications.
 
-## Getting Started
-- **NPM** is used to publish, discover, install, and develop node programs.
-- **Yarn** provides speed, consistency, stability, and security.
-- **PNPM** offers significantly better disk space usage and speed.
+## Getting started
 
 | Package Manager | Command                  |
 | --------------- | ------------------------ |
@@ -15,7 +12,7 @@ A platform to generate backend applications using ExpressJS framework. Use `type
 
 Follow the prompts or run command `yarn create @medly/api <project-name> [options]` with the below options.
 
-**Options Available**
+### Options available
 | Flags                                     | Description                    | Choices                    | Default |
 | ----------------------------------------- | ------------------------------ | -------------------------- | ------- |
 | `-V, --version`                           | output the version number      |                            |         |
@@ -25,6 +22,7 @@ Follow the prompts or run command `yarn create @medly/api <project-name> [option
 | `-h, --help`                              | display help for command       |                            |         |
 
 ## Features
+Run commands:
 1. `jest` to write `unit tests`.
 2. `prettier` to automatically `format` the code.
 3. `eslint` to catch the error.

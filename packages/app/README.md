@@ -1,11 +1,8 @@
 # 🖥️ Create Web Applications
 
-A platformn to generate simple react applications. Use `typescript` language.
+A kit to generate simple react applications.
 
-## Getting Started
-- **NPM** is used to publish, discover, install, and develop node programs.
-- **Yarn** provides speed, consistency, stability, and security.
-- **PNPM** offers significantly better disk space usage and speed.
+## Getting started
 
 | Package Manager | Command                  |
 | --------------- | ------------------------ |
@@ -15,7 +12,7 @@ A platformn to generate simple react applications. Use `typescript` language.
 
 Follow the prompts or run command `yarn create @medly/app <project-name> [options]` with the below options.
 
-**Options Available**
+### Options available
 | Flags                                     | Description                    | Choices                   | Default |
 | ----------------------------------------- | ------------------------------ | ------------------------- | ------- |
 | `-V, --version`                           | output the version number      |                           |         |
@@ -25,6 +22,7 @@ Follow the prompts or run command `yarn create @medly/app <project-name> [option
 | `-h, --help`                              | display help for command       |                           |         |
 
 ## Features
+Run commands:
 1. `babel` to `transpile` the code.
 2. `jest` to write `unit tests`.
 3. `webpack` to `bundle` the code.

@@ -1,11 +1,8 @@
 # ⚛️ Create React Component
 
-A platform to generate simple react components. Use `typescript` language.
+A kit to generate simple react components.
 
-## Getting Started
-- **NPM** is used to publish, discover, install, and develop node programs.
-- **Yarn** provides speed, consistency, stability, and security.
-- **PNPM** offers significantly better disk space usage and speed.
+## Getting started
 
 | Package Manager | Command                        |
 | --------------- | ------------------------------ |
@@ -15,7 +12,7 @@ A platform to generate simple react components. Use `typescript` language.
 
 Follow the prompts or run command `yarn create @medly/component <project-name> [options]` with the below options.
 
-**Options Available**
+### Options available
 
 | Flags                                     | Description                    | Choices                | Default  |
 | ----------------------------------------- | ------------------------------ | ---------------------- | -------- |
@@ -28,6 +25,7 @@ Follow the prompts or run command `yarn create @medly/component <project-name> [
 | `-h, --help`                              | display help for command       |                        |          |
 
 ## Features
+Run commands:
 1. `storybook` for documentation.
 2. `babel` to `transpile` the code.
 3. `rollup` to bundle the code.

@@ -1,6 +1,6 @@
-# Create Api
+# 🖥️ Create API
 
-An application for generating backend application using ExpressJS.
+A kit to generate backend applications.
 
 ## Getting started
 
@@ -10,9 +10,9 @@ An application for generating backend application using ExpressJS.
 | Yarn            | `yarn create @medly/api` |
 | PNPM            | `pnpx @medly/create-api` |
 
-Then follow the prompts or you can run command `yarn create @medly/api <project-name> [options]` with below options.
+Follow the prompts or run command `yarn create @medly/api <project-name> [options]` with the below options.
 
-### Options
+### Options 
 
 | Flags                                     | Description                    | Choices                    | Default |
 | ----------------------------------------- | ------------------------------ | -------------------------- | ------- |
@@ -24,7 +24,7 @@ Then follow the prompts or you can run command `yarn create @medly/api <project-
 
 ## Features
 
-It sets up below things:
+Run commands:
 
 1. `jest` to write `unit tests`.
 2. `prettier` to automatically `format` the code.

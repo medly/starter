@@ -1,6 +1,6 @@
-# ⚛️ Create Web App
+# 🖥️ Create Web Applications
 
-An application for generating simple react app.
+A kit to generate simple react applications.
 
 ## Getting started
 
@@ -10,7 +10,7 @@ An application for generating simple react app.
 | Yarn            | `yarn create @medly/app` |
 | PNPM            | `pnpx @medly/create-app` |
 
-Then follow the prompts or you can run command `yarn create @medly/app <project-name> [options]` with below options.
+Follow the prompts run command `yarn create @medly/app <project-name> [options]` with the below options.
 
 ### Options
 
@@ -24,7 +24,7 @@ Then follow the prompts or you can run command `yarn create @medly/app <project-
 
 ## Features
 
-It sets up below things:
+Run commands
 
 1. `babel` to `transpile` the code.
 2. `jest` to write `unit tests`.

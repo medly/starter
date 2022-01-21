@@ -10,7 +10,7 @@ A kit to generate simple react applications.
 | Yarn            | `yarn create @medly/app` |
 | PNPM            | `pnpx @medly/create-app` |
 
-Follow the prompts run command `yarn create @medly/app <project-name> [options]` with the below options.
+Follow the prompts or run command `yarn create @medly/app <project-name> [options]` with the below options.
 
 ### Options
 

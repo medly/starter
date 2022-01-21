@@ -10,7 +10,7 @@ A kit to generate simple modules or applications.
 | Yarn            | `yarn create @medly/module` |
 | PNPM            | `pnpx @medly/create-module` |
 
-Follow the prompts run command `yarn create @medly/module <project-name> [options]` with the below options.
+Follow the prompts or run command `yarn create @medly/module <project-name> [options]` with the below options.
 
 ### Options
 

@@ -19,6 +19,9 @@ The Starter-kit consists of the below packages:
 ### 🖥️ [Create API](https://github.com/medly/starter/tree/master/packages/api)
  
 
+### Contributing
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting us the pull requests.
+
 ## Contributors
 This project exists thanks to all the people who contribute.
 

@@ -24,7 +24,7 @@ Follow the prompts or run command `yarn create @medly/app <project-name> [option
 
 ## Features
 
-Run commands
+The following features are set up by this kit:
 
 1. `babel` to `transpile` the code.
 2. `jest` to write `unit tests`.

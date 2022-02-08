@@ -26,7 +26,7 @@ Follow the prompts or run command `yarn create @medly/component <project-name> [
 
 ## Features
 
-Run commands:
+The following features are set up by this kit:
 
 1. `storybook` for documentation.
 2. `babel` to `transpile` the code.

@@ -29,7 +29,7 @@ Follow the prompts or run command `yarn create @medly/module <project-name> [opt
 
 ## Features
 
-Run Commands:
+The following features are set up by this kit:
 
 1. `babel` to `transpile` the code.
 2. `jest` to write `unit tests`.

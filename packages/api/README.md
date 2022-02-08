@@ -24,7 +24,7 @@ Follow the prompts or run command `yarn create @medly/api <project-name> [option
 
 ## Features
 
-Run commands:
+The following features are set up by this kit:
 
 1. `jest` to write `unit tests`.
 2. `prettier` to automatically `format` the code.

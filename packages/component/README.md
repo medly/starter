@@ -1,6 +1,6 @@
-# ⚛️ Create React component
+# ⚛️ Create React Component
 
-An application for generating simple react component.
+A kit to generate simple react components.
 
 ## Getting started
 
@@ -10,7 +10,7 @@ An application for generating simple react component.
 | Yarn            | `yarn create @medly/component` |
 | PNPM            | `pnpx @medly/create-component` |
 
-Then follow the prompts or you can run command `yarn create @medly/component <project-name> [options]` with below options.
+Follow the prompts or run command `yarn create @medly/component <project-name> [options]` with the below options.
 
 ### Options
 
@@ -26,7 +26,7 @@ Then follow the prompts or you can run command `yarn create @medly/component <pr
 
 ## Features
 
-It sets up below things:
+The following features are set up by this kit:
 
 1. `storybook` for documentation.
 2. `babel` to `transpile` the code.

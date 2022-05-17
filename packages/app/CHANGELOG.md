@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.3](https://github.com/medly/starter/compare/@medly/create-app@0.8.2...@medly/create-app@0.8.3) (2022-05-17)
+
+
+### Bug Fixes
+
+* fixed version of react to 17.0.0 ([#57](https://github.com/medly/starter/issues/57)) ([145ab9d](https://github.com/medly/starter/commit/145ab9d6ba2d1a876ed318b8718c6ab27dacfb9b))
+
+
+
+
+
 ## [0.8.2](https://github.com/medly/starter/compare/@medly/create-app@0.8.1...@medly/create-app@0.8.2) (2021-11-25)
 
 **Note:** Version bump only for package @medly/create-app
